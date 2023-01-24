@@ -327,8 +327,15 @@ div {
   color: white;
 }
 
-.main {
-  background-color: rgb(43, 103, 234);
+.landing {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.landing-photo-caption {
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar {

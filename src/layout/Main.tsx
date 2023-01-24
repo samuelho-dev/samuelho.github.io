@@ -1,6 +1,7 @@
 import React from 'react';
 import { animated, useSpring } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
+import Landing from '../components/Landing';
 
 export default function Main() {
   return (
@@ -13,8 +14,7 @@ export default function Main() {
         borderRadius: 8,
       }}
     >
-      <h3>Finance Analyst</h3>
-      <h3>March 2019 - December 2019</h3>
+      <Landing />
     </animated.div>
   );
 }
