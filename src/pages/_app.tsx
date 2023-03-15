@@ -1,6 +1,27 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import Layout from '@/layout/Layout';
+import { useRouter } from 'next/router';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const router = useRouter();
+  const handleRoute = (curPage: string) => {
+    router.push(`/${curPage}`, undefined, { shallow: true });
+  };
+  return (
+    <>
+      <Head>
+        <title>Samuel Ho</title>
+        <meta name="description" content="Samuel Ho" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="h-screen flex-col bg-customGreen">
+        <Layout handleRoute={handleRoute}>
+          <Component {...pageProps} handleRoute={handleRoute} />
+        </Layout>
+      </div>
+    </>
+  );
 }
