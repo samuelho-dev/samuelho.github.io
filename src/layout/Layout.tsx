@@ -7,7 +7,7 @@ export default function Layout({ children, handleRoute }) {
       <header className="flex justify-between">
         <h1 onClick={() => handleRoute('')}>Samuel Ho</h1>
 
-        <Navbar />
+        <Navbar handleRoute={handleRoute} />
       </header>
       <main>{children}</main>
       <Footer />
