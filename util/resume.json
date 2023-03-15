@@ -1,0 +1,87 @@
+{
+  "education": [
+    {
+      "institution": "Hack Reactor",
+      "degree": "Software Engineering",
+      "location": "Los Angeles, CA",
+      "dates": "December 2022 – March 2023"
+    },
+    {
+      "institution": "UC Santa Barbara",
+      "location": "Santa Barbara, CA",
+      "degree": "Bachelor of Arts in Economics",
+      "dates": "August 2016 – December 2018"
+    }
+  ],
+  "workExperience": [
+    {
+      "employer": "Tapestry – COACH New York",
+      "location": "New York, NY",
+      "title": "Analyst",
+      "dates": "April 2021 – June 2022",
+      "responsibilities": [
+        "Oversaw the P&Ls of multiple business units, including Bags, Ready to Wear, Footwear, Photo Studio, and Merchandise, under Coach Design & Global Marketing.",
+        "Collaborated with the design teams to develop and implement cost-saving initiatives.",
+        "Conducted detailed P&L breakdowns per category to monitor gross margins and overall performance of individual product lines.",
+        "Provided critical data to company executives, working in close collaboration with the CFO, for informed decision-making."
+      ]
+    },
+    {
+      "employer": "PNC Bank – Business Credit",
+      "location": "Philadelphia, PA",
+      "title": "Corporate Banking Analyst",
+      "dates": "March 2020 – April 2021",
+      "responsibilities": [
+        "Collaborated closely with C-level executives, finance managers, and accounting staff to conduct due diligence on potential secured credit commitments, utilizing analytical skills to evaluate and manage company risk profiles.",
+        "Conducted thorough collateral audits on existing portfolio companies to recommend adjustments to total credit extension.",
+        "Analyzed and interpreted historical performance trends, cash flow strength, collateral coverage, and private equity sponsor involvement, utilizing advanced software tools to calculate key profitability and leverage indicators such as free cash flow, unfunded Capex, and estimated fixed charge coverage ratio."
+      ]
+    },
+    {
+      "employer": "Autism Learning Partners",
+      "location": "Pasadena, CA",
+      "title": "Financial Analyst",
+      "dates": "March 2019 – December 2019",
+      "responsibilities": [
+        "Assisted senior corporate finance analysts in preparing internal monthly operational reports for use by company executive and private equity sponsor group. Reporting breaks down and summarizes key performance indicators and company financials by region for comparison between actual vs. budgeted figures.",
+        "Created databases and VBA macros to provide ease of data manipulation for analysis and effectively decreased turnaround time for reporting/analysis."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Swapesy PM/Engineer",
+      "description": [
+        "Lead an agile team of six engineers in the successful development and launch of a full-stack trading card ecommerce app within a week utilizing React Native and Firebase",
+        "Engineered a mobile app marketplace catering to trading card enthusiasts, featuring seamless buying, trading, and offer-making functionalities. Included social features such as real-time chat to facilitate communication between users",
+        "Leveraged project management skills and technical expertise to ensure the timely delivery of a high-quality, user-friendly app"
+      ],
+      "technologies": ["React Native", "Firebase"]
+    },
+    {
+      "title": "AlbumGuessr",
+      "description": [
+        "Technologies used: Typescript, NextJS, Next Auth, Prisma, React Query, and PostgreSQL",
+        "Engineered an engaging game using the Spotify API and web playback SDK. The game challenges players to match the current track being played to its corresponding album cover and featured a leaderboard to promote user engagement and retention"
+      ],
+      "technologies": [
+        "Typescript",
+        "NextJS",
+        "Next Auth",
+        "Prisma",
+        "React Query",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "title": "Systems Design Engineer",
+      "description": [
+        "Collaborated in a team of three engineers to architect and deploy a PostgreSQL database solution for a fashion ecommerce store, utilizing microservices from AWS",
+        "Improved query times by over 150% through the implementation of effective caching techniques and integrated GitHub authentication routes to enhance database security",
+        "Engineered data cleaning algorithms to effectively process and upload large datasets in preparation for seamless database migration. Utilized technologies such as Javascript, PostgreSQL, Sequelize, and AWS EC2 to successfully complete the project"
+      ],
+      "technologies": ["Javascript", "PostgreSQL", "Sequelize", "AWS EC2"]
+    }
+  ]
+}

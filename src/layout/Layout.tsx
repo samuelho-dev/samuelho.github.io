@@ -1,7 +1,12 @@
 import Navbar from '@/layout/Navbar';
 import Footer from './Footer';
 
-export default function Layout({ children, handleRoute }) {
+interface Props {
+  children: any;
+  handleRoute: Function;
+}
+
+export default function Layout({ children, handleRoute }: Props) {
   return (
     <>
       <header className="flex justify-between">

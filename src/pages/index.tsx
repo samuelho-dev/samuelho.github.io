@@ -1,5 +1,4 @@
 import Game from '@/components/Game';
-import Project from '@/components/Project';
 import SomethingWeird from '@/components/SomethingWeird';
 import React from 'react';
 
@@ -14,19 +13,21 @@ function Home({ handleRoute }) {
         <SomethingWeird />
       </div>
       <div
-        className="col-span-1 row-span-1 bg-customOrange"
+        className="col-span-1 row-span-1 flex-col bg-customOrange"
         onClick={() => handleRoute('work-history')}
       >
         <h5>Work History</h5>
-        <div className="bg-customBlue">WorkHistory</div>
+        <div className="mx-10 bg-customBlue">WorkHistory</div>
       </div>
       <div className="col-span-1 row-span-1 bg-customLightPink">
         <h5>Game</h5>
         <Game />
       </div>
-      <div className="col-span-1 row-span-1 bg-customBlue">
+      <div
+        className="col-span-1 row-span-1 bg-customBlue"
+        onClick={() => handleRoute('projects')}
+      >
         <h5>Project</h5>
-        <Project />
       </div>
 
       <div className="col-span-2 row-span-2 bg-customYellow">
