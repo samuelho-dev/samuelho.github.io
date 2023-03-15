@@ -7,3 +7,6 @@
     format('opentype');
   font-display: swap; /* use "swap" to show the font as soon as possible */
 }
+body {
+  font-family: 'CustomFont', sans-serif;
+}
