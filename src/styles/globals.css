@@ -10,3 +10,16 @@
 body {
   font-family: 'CustomFont', sans-serif;
 }
+
+h1 {
+  font-size: x-large;
+  color: white;
+}
+h2 {
+  font-size: large;
+  color: white;
+}
+
+h5 {
+  font-size: large;
+}
