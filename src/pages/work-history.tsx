@@ -3,13 +3,17 @@ import data from '../../util/resume.json';
 
 function WorkHistory() {
   const experience = data.workExperience;
-  console.log(Object.keys(experience), experience);
+  console.log(experience);
   return (
     <div>
-      {Object.keys(experience).map((item, i) => (
+      {experience.map((entry, i) => (
         <div key={i}>
-          {experience[item].responsibilities.map((el, j) => (
-            <p key={j}>{el}</p>
+          <p>{entry.employer}</p>
+          <p>{entry.title}</p>
+          <p>{entry.dates}</p>
+          <p>{entry.location}</p>
+          {entry.responsibilities.map((el, j) => (
+            <p key={j}> {el}</p>
           ))}
         </div>
       ))}
