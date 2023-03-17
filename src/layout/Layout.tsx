@@ -16,7 +16,7 @@ export default function Layout({ children, handleRoute }: Props) {
 
         <Navbar handleRoute={handleRoute} />
       </header>
-      <main className="mx-48">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );
