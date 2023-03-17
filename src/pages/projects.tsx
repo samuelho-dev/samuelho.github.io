@@ -8,11 +8,11 @@ function Projects() {
       {projects.map((project, i) => (
         <div key={i}>
           <p>{project.title}</p>
-          {project.description.map((desc) => (
-            <p>{desc}</p>
+          {project.description.map((desc, j) => (
+            <p key={j}>{desc}</p>
           ))}
-          {project.technologies.map((tech) => (
-            <p>{tech}</p>
+          {project.technologies.map((tech, k) => (
+            <p key={k}>{tech}</p>
           ))}
         </div>
       ))}
