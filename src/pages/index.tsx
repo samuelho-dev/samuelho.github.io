@@ -44,10 +44,12 @@ function Home({ handleRoute }) {
           <Image src={projectJPG} alt="project jpg" className="object-fill" />
         </div>
       </div>
-      <div className="col-span-2 row-span-2 bg-customYellow ">
+      <div className="col-span-2 row-span-2 h-full w-full bg-customYellow">
         <h5>Odd</h5>
       </div>
-      {gameModal && <Canvas handleGameModal={handleGameModal} />}
+      {gameModal && (
+        <Canvas handleGameModal={handleGameModal} gameModal={gameModal} />
+      )}
     </div>
   );
 }
