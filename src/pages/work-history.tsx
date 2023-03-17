@@ -8,10 +8,10 @@ function WorkHistory() {
   const containerRef = useRef<HTMLDivElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
 
-  const handleDetails = (e, i: number) => {
+  const handleDetails = (e, entry) => {
     e.preventDefault();
-    console.log(experience[i]);
-    setDetail(experience[i]);
+    console.log(entry);
+    setDetail(entry);
   };
 
   const animateDetail = (opacity: number, width: string) => {
@@ -30,49 +30,50 @@ function WorkHistory() {
   };
 
   return (
-    <div className="mx-36 flex rounded-xl bg-white">
+    <div className="mx-30 flex rounded-xl bg-customWhite">
       <div
         ref={containerRef}
+        onMouseOver={(e) => {
+          animateContainer('50%');
+          animateDetail(1, '100%');
+        }}
+        onMouseLeave={() => {
+          setDetail(null);
+          animateContainer('75%');
+          animateDetail(0, '0%');
+        }}
         className="flex w-full flex-col gap-6 rounded-xl bg-customOrange p-6 "
       >
         <h1>Previously..</h1>
         {experience.map((entry, i) => (
           <div
             key={i}
-            onClick={(e) => handleDetails(e, i)}
-            onMouseOver={(e) => {
-              handleDetails(e, i);
-              animateContainer('25%');
-              animateDetail(1, '80%');
-            }}
-            onMouseLeave={() => {
-              setDetail(null);
-              animateContainer('75%');
-              animateDetail(0, '25%');
-            }}
-            className="flex justify-between rounded-xl bg-customOrange p-6 outline-dotted hover:outline-double"
+            onMouseOver={(e) => handleDetails(e, entry)}
+            onClick={(e) => handleDetails(e, entry)}
+            className="min-w-2/3 flex justify-between rounded-xl bg-customOrange p-6 outline-dotted hover:outline-double"
           >
             <p>{entry.employer}</p>
-            <p>{entry.title}</p>
+            {!detail && <p>{entry.title}</p>}
           </div>
         ))}
       </div>
-      {detail && (
-        <div
-          ref={detailRef}
-          className="translate-y-30 h-full p-6 opacity-0 transition-all duration-200"
-        >
-          <p>{detail.location}</p>
-          <p>{detail.dates}</p>
-          <p>
+      <div
+        ref={detailRef}
+        className="translate-y-30 h-full p-6 opacity-0 transition-all duration-200"
+      >
+        {detail && (
+          <>
+            <p>{detail.location}</p>
+            <p>{detail.dates}</p>
+
             {detail.responsibilities.map((el, i) => (
               <div key={i}>
                 <p>{el}</p>
               </div>
             ))}
-          </p>
-        </div>
-      )}
+          </>
+        )}
+      </div>
     </div>
   );
 }
