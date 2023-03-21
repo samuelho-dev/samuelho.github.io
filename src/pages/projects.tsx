@@ -12,32 +12,39 @@ import { SiSequelize } from 'react-icons/si';
 import { BsGithub } from 'react-icons/bs';
 import Image from 'next/image';
 
+interface IconMap {
+  [key: string]: React.ReactElement;
+}
+
 function Projects() {
   const projects = data.projects;
-  // const imagemap = {
-  //   Swapesy:
-  // }
-  const iconmap = {
-    'React Native': <FaReact />,
-    'React Query': <SiReactquery />,
-    Typescript: <SiTypescript />,
-    Firebase: <SiFirebase />,
-    Prisma: <SiPrisma />,
-    PostgreSQL: <SiPostgresql />,
-    Javascript: <SiJavascript />,
-    Sequelize: <SiSequelize />,
-    AWS: <FaAws />,
-    Node: <FaNodeJs />,
-    NextJS: <TbBrandNextjs />,
+  const iconmap: IconMap = {
+    'React Native': <FaReact color="white" />,
+    'React Query': <SiReactquery color="white" />,
+    Typescript: <SiTypescript color="white" />,
+    Firebase: <SiFirebase color="white" />,
+    Prisma: <SiPrisma color="white" />,
+    PostgreSQL: <SiPostgresql color="white" />,
+    Javascript: <SiJavascript color="white" />,
+    Sequelize: <SiSequelize color="white" />,
+    AWS: <FaAws color="white" />,
+    Node: <FaNodeJs color="white" />,
+    NextJS: <TbBrandNextjs color="white" />,
   };
   return (
-    <div className="flex flex-col gap-4">
+    <ul className="flex flex-col items-center gap-4">
       {projects.map((project, i) => (
-        <div
+        <li
           key={i}
-          className={`flex gap-4 p-6 ${i % 2 !== 0 && 'flex-row-reverse'}`}
+          className={`flex w-fit gap-4 p-6 ${
+            i % 2 !== 0 && 'flex-row-reverse'
+          }`}
         >
-          <div className="w-1/2 bg-customLightPink hover:bg-none">
+          <div
+            className={`z-0 w-fit bg-customLightPink hover:bg-none ${
+              i % 2 !== 0 && 'ml-[-10%]'
+            }`}
+          >
             <div className="mix-blend-darken grayscale filter hover:filter-none">
               <Image
                 src={`/${project.name}.png`}
@@ -47,50 +54,55 @@ function Projects() {
               />
             </div>
           </div>
-          <div className="col flex w-1/2 flex-col justify-center">
+          <div
+            className={`z-10 flex w-1/2 flex-col justify-center ${
+              i % 2 === 0 && 'ml-[-10%]'
+            }`}
+          >
             <div
               className={`flex items-center gap-4 ${
                 i % 2 === 0 && 'justify-end'
               }`}
             >
-              <h5 className="text-customWhite">{project.name}</h5>
+              <a
+                href={project.source}
+                className="cursor-pointer"
+                target="_blank"
+              >
+                <h5 className=" text-customLightPink hover:text-opacity-80">
+                  {project.name}
+                </h5>
+              </a>
               <a href={project.source} target="_blank">
                 <BsGithub />
               </a>
             </div>
 
             <p
-              className={`flex text-customWhite ${
-                i % 2 === 0 && 'justify-end '
-              }`}
+              className={`flex text-slate-700 ${i % 2 === 0 && 'justify-end '}`}
             >
               {project.role}
             </p>
             <div className="bg-customBlue bg-opacity-80 p-2">
-              <p className={`text-customWhite ${i % 2 === 0 && 'text-right'}`}>
+              <p className={`text-slate-300 ${i % 2 === 0 && 'text-right'}`}>
                 {project.description}
               </p>
             </div>
-            <div className="flex flex-col justify-end gap-2">
-              <p className={i % 2 === 0 && 'text-right'}>
-                <ins className="text-customBlue">Technologies Used</ins>
-              </p>
-              <div
-                className={`inline-grid grid-cols-3 gap-4 ${
-                  i % 2 === 0 && 'justify-items-end'
-                }`}
-              >
-                {project.technologies.map((tech, k) => (
-                  <div key={k} className="flex items-center gap-2">
-                    <sub className="w-full">{tech}</sub>
-                  </div>
-                ))}
-              </div>
+
+            <div className={`flex justify-end gap-4 `}>
+              {project.technologies.map((tech, k) => (
+                <div key={k} className={`flex items-center gap-2 pt-4`}>
+                  <div>{iconmap[tech]}</div>
+                  <sub className=" whitespace-nowrap text-slate-300">
+                    {tech}
+                  </sub>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
