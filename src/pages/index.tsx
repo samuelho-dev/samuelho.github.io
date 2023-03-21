@@ -24,9 +24,9 @@ function Home({ handleRoute }) {
       </div>
       <div
         className="col-span-1 row-span-1 my-12 flex h-3/4 w-3/4 cursor-pointer flex-col items-center justify-center bg-customOrange "
-        onClick={() => handleRoute('work-history')}
+        onClick={() => handleRoute('work')}
       >
-        <h5>Work History</h5>
+        <h5>Work</h5>
         <div className="relative h-1/2 w-2/3">
           <Image src={workJPG} alt="work jpg" fill className="object-cover" />
         </div>
@@ -37,9 +37,9 @@ function Home({ handleRoute }) {
       </div>
       <div
         className="col-span-1 row-span-1 flex h-full w-1/2 cursor-pointer flex-col items-center justify-center bg-customBlue py-5"
-        onClick={() => handleRoute('projects')}
+        onClick={() => handleRoute('about')}
       >
-        <h5>Projects</h5>
+        <h5>About Me</h5>
         <div className="relative w-2/3">
           <Image src={projectJPG} alt="project jpg" className="object-fill" />
         </div>

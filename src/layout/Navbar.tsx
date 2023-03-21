@@ -3,14 +3,11 @@ import React from 'react';
 function Navbar({ handleRoute }) {
   return (
     <nav className="flex items-center gap-4">
-      <h2
-        className="cursor-pointer"
-        onClick={() => handleRoute('work-history')}
-      >
+      <h2 className="cursor-pointer" onClick={() => handleRoute('work')}>
         Work
       </h2>
-      <h2 className="cursor-pointer" onClick={() => handleRoute('projects')}>
-        Projects
+      <h2 className="cursor-pointer" onClick={() => handleRoute('about')}>
+        About Me
       </h2>
       <div
         className=" flex rounded-full bg-customBlue p-2"
