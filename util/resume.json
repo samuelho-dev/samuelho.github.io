@@ -51,37 +51,32 @@
 
   "projects": [
     {
-      "title": "Swapesy PM/Engineer",
-      "description": [
-        "Lead an agile team of six engineers in the successful development and launch of a full-stack trading card ecommerce app within a week utilizing React Native and Firebase",
-        "Engineered a mobile app marketplace catering to trading card enthusiasts, featuring seamless buying, trading, and offer-making functionalities. Included social features such as real-time chat to facilitate communication between users",
-        "Leveraged project management skills and technical expertise to ensure the timely delivery of a high-quality, user-friendly app"
-      ],
-      "technologies": ["React Native", "Firebase"]
+      "name": "Swapesy",
+      "role": "PM/Engineer",
+      "description": "A mobile ecommerce app for trading card enthusiasts. Users can interact with each other via our real-time messaging platform and trade/purchase cards.",
+      "technologies": ["React Native", "Firebase"],
+      "source": "https://github.com/stunningstunfisk/swapesy"
     },
     {
-      "title": "AlbumGuessr",
-      "description": [
-        "Technologies used: Typescript, NextJS, Next Auth, Prisma, React Query, and PostgreSQL",
-        "Engineered an engaging game using the Spotify API and web playback SDK. The game challenges players to match the current track being played to its corresponding album cover and featured a leaderboard to promote user engagement and retention"
-      ],
+      "name": "AlbumGuessr",
+      "role": "Solo Engineer",
+      "description": "A web game utilizing Spotify search data, and webplayback SDK. Match the currently played track to the correct album cover, earn points and keep track of the top scorers on the leaderboard",
       "technologies": [
         "Typescript",
         "NextJS",
-        "Next Auth",
+        "NextAuth",
         "Prisma",
         "React Query",
         "PostgreSQL"
-      ]
+      ],
+      "source": "https://github.com/samuelho-dev/spotify-album-guessing-game"
     },
     {
-      "title": "Systems Design Engineer",
-      "description": [
-        "Collaborated in a team of three engineers to architect and deploy a PostgreSQL database solution for a fashion ecommerce store, utilizing microservices from AWS",
-        "Improved query times by over 150% through the implementation of effective caching techniques and integrated GitHub authentication routes to enhance database security",
-        "Engineered data cleaning algorithms to effectively process and upload large datasets in preparation for seamless database migration. Utilized technologies such as Javascript, PostgreSQL, Sequelize, and AWS EC2 to successfully complete the project"
-      ],
-      "technologies": ["Javascript", "PostgreSQL", "Sequelize", "AWS EC2"]
+      "name": "SunChip",
+      "role": "Engineer",
+      "description": "Designed and implemented a secure backend and database for a fashion ecommerce store hosted using AWS EC2. Implemented caching via NGNIX and horizontal scaling via AWS.",
+      "technologies": ["Javascript", "Node", "PostgreSQL", "Sequelize", "AWS"],
+      "source": "https://github.com/sunChips-mysteryFlavor"
     }
   ]
 }
