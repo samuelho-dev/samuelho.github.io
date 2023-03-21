@@ -32,77 +32,81 @@ function Projects() {
     NextJS: <TbBrandNextjs color="white" />,
   };
   return (
-    <ul className="flex flex-col items-center gap-4">
-      {projects.map((project, i) => (
-        <li
-          key={i}
-          className={`flex w-fit gap-4 p-6 ${
-            i % 2 !== 0 && 'flex-row-reverse'
-          }`}
-        >
-          <div
-            className={`z-0 w-fit bg-customLightPink hover:bg-none ${
-              i % 2 !== 0 && 'ml-[-10%]'
-            }`}
-          >
-            <div className="mix-blend-darken grayscale filter hover:filter-none">
-              <Image
-                src={`/${project.name}.png`}
-                alt={project.name}
-                width={500}
-                height={500}
-              />
-            </div>
-          </div>
-          <div
-            className={`z-10 flex w-1/2 flex-col justify-center ${
-              i % 2 === 0 && 'ml-[-10%]'
+    <section className="max-w-6xl">
+      <ul className="flex flex-col items-center gap-4">
+        {projects.map((project, i) => (
+          <li
+            key={i}
+            className={`flex w-fit gap-4 p-6 ${
+              i % 2 !== 0 && 'flex-row-reverse'
             }`}
           >
             <div
-              className={`flex items-center gap-4 ${
-                i % 2 === 0 && 'justify-end'
+              className={`z-0 w-fit bg-customLightPink hover:bg-none ${
+                i % 2 !== 0 && 'ml-[-10%]'
               }`}
             >
-              <a
-                href={project.source}
-                className="cursor-pointer"
-                target="_blank"
-              >
-                <h5 className=" text-customLightPink hover:text-opacity-80">
-                  {project.name}
-                </h5>
-              </a>
-              <a href={project.source} target="_blank">
-                <BsGithub />
-              </a>
+              <div className="mix-blend-darken grayscale filter hover:filter-none">
+                <Image
+                  src={`/${project.name}.png`}
+                  alt={project.name}
+                  width={500}
+                  height={500}
+                />
+              </div>
             </div>
-
-            <p
-              className={`flex text-slate-700 ${i % 2 === 0 && 'justify-end '}`}
+            <div
+              className={`z-10 flex w-1/2 flex-col justify-center ${
+                i % 2 === 0 && 'ml-[-10%]'
+              }`}
             >
-              {project.role}
-            </p>
-            <div className="bg-customBlue bg-opacity-80 p-2">
-              <p className={`text-slate-300 ${i % 2 === 0 && 'text-right'}`}>
-                {project.description}
-              </p>
-            </div>
+              <div
+                className={`flex items-center gap-4 ${
+                  i % 2 === 0 && 'justify-end'
+                }`}
+              >
+                <a
+                  href={project.source}
+                  className="cursor-pointer"
+                  target="_blank"
+                >
+                  <h1 className=" text-customLightPink hover:text-opacity-80">
+                    {project.name}
+                  </h1>
+                </a>
+                <a href={project.source} target="_blank">
+                  <BsGithub />
+                </a>
+              </div>
 
-            <div className={`flex justify-end gap-4 `}>
-              {project.technologies.map((tech, k) => (
-                <div key={k} className={`flex items-center gap-2 pt-4`}>
-                  <div>{iconmap[tech]}</div>
-                  <sub className=" whitespace-nowrap text-slate-300">
-                    {tech}
-                  </sub>
-                </div>
-              ))}
+              <p
+                className={`flex text-slate-700 ${
+                  i % 2 === 0 && 'justify-end '
+                }`}
+              >
+                {project.role}
+              </p>
+              <div className="bg-customBlue bg-opacity-80 p-2">
+                <p className={`text-slate-300 ${i % 2 === 0 && 'text-right'}`}>
+                  {project.description}
+                </p>
+              </div>
+
+              <div className={`flex justify-end gap-4 `}>
+                {project.technologies.map((tech, k) => (
+                  <div key={k} className={`flex items-center gap-2 pt-4`}>
+                    <div>{iconmap[tech]}</div>
+                    <sub className=" whitespace-nowrap text-slate-300">
+                      {tech}
+                    </sub>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </li>
-      ))}
-    </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
