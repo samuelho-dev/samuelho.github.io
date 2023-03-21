@@ -5,7 +5,7 @@ import WorkHistory from '@/components/WorkHistory';
 
 function Work() {
   return (
-    <div>
+    <div className="flex flex-col items-center gap-12">
       <WorkHistory />
       <Projects />
     </div>
