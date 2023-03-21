@@ -33,7 +33,10 @@ function Projects() {
   return (
     <div className="flex flex-col gap-4">
       {projects.map((project, i) => (
-        <div key={i} className="flex gap-4 p-6">
+        <div
+          key={i}
+          className={`flex gap-4 p-6 ${i % 2 !== 0 && 'flex-row-reverse'}`}
+        >
           <div className="w-1/2 bg-customLightPink hover:bg-none">
             <div className="mix-blend-darken grayscale filter hover:filter-none">
               <Image
@@ -44,23 +47,41 @@ function Projects() {
               />
             </div>
           </div>
-          <div className="w-1/2 ">
-            <div className="flex items-center gap-4">
-              <h5>{project.name}</h5>
+          <div className="col flex w-1/2 flex-col justify-center">
+            <div
+              className={`flex items-center gap-4 ${
+                i % 2 === 0 && 'justify-end'
+              }`}
+            >
+              <h5 className="text-customWhite">{project.name}</h5>
               <a href={project.source} target="_blank">
                 <BsGithub />
               </a>
             </div>
 
-            <p>{project.role}</p>
-            <p>{project.description}</p>
-
-            <div className="flex flex-col gap-2">
-              <ins>Technologies Used</ins>
-              <div className="grid grid-cols-3 gap-4">
+            <p
+              className={`flex text-customWhite ${
+                i % 2 === 0 && 'justify-end '
+              }`}
+            >
+              {project.role}
+            </p>
+            <div className="bg-customBlue bg-opacity-80 p-2">
+              <p className={`text-customWhite ${i % 2 === 0 && 'text-right'}`}>
+                {project.description}
+              </p>
+            </div>
+            <div className="flex flex-col justify-end gap-2">
+              <p className={i % 2 === 0 && 'text-right'}>
+                <ins className="text-customBlue">Technologies Used</ins>
+              </p>
+              <div
+                className={`inline-grid grid-cols-3 gap-4 ${
+                  i % 2 === 0 && 'justify-items-end'
+                }`}
+              >
                 {project.technologies.map((tech, k) => (
                   <div key={k} className="flex items-center gap-2">
-                    {iconmap[tech]}
                     <sub className="w-full">{tech}</sub>
                   </div>
                 ))}
