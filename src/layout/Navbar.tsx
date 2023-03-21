@@ -10,7 +10,7 @@ function Navbar({ handleRoute }) {
         About Me
       </h2>
       <div
-        className=" flex rounded-full bg-customBlue p-2"
+        className=" flex rounded-full bg-customBlue py-1 px-2"
         onClick={() => handleRoute('contact')}
       >
         <h2 className="cursor-pointer">Contact</h2>

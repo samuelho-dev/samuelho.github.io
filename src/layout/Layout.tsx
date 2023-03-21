@@ -9,7 +9,7 @@ interface Props {
 export default function Layout({ children, handleRoute }: Props) {
   return (
     <>
-      <header className="flex justify-between">
+      <header className="flex w-full justify-between">
         <h1 onClick={() => handleRoute('')} className="cursor-pointer">
           Samuel Ho
         </h1>
