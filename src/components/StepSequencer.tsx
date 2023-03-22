@@ -23,7 +23,7 @@ function StepSequencer() {
   const [loaded, setLoaded] = useState(false);
   const [play, setPlay] = useState(false);
   const [tempo, setTempo] = useState(120);
-  const stepSequencer = useRef(null);
+  const stepSequencer = useRef<Tone.Sampler | null>(null);
   const [grid, setGrid] = useState(makeGrid(notes));
   useEffect(() => {
     stepSequencer.current = new Sampler(
@@ -41,7 +41,7 @@ function StepSequencer() {
       grid.forEach((row) => {
         const note = row[beat];
         if (note.isActive) {
-          stepSequencer.current.triggerAttackRelease(note.key, '8n', time);
+          stepSequencer.current?.triggerAttackRelease(note.key, '8n', time);
         }
       });
       beat = (beat + 1) % 8;
@@ -75,25 +75,41 @@ function StepSequencer() {
   };
 
   return (
-    <div>
-      <button onClick={handlePlay}>{!play ? 'Play' : 'Pause'}</button>
-      <h1>StepSequencer</h1>
-      {grid.map((col, rowIdx) => (
-        <div key={rowIdx} className="flex gap-6 py-2">
-          {col.map((note, noteIdx) => (
-            <button
-              disabled={!loaded}
-              className={`h-8 w-8  ${
-                note.isActive
-                  ? 'rounded-lg bg-customGreen'
-                  : 'rounded-md bg-customWhite'
-              }`}
-              onClick={() => handleNoteClick(rowIdx, noteIdx)}
-              key={`note-${rowIdx}-${noteIdx}`}
-            />
-          ))}
+    <div className="flex w-full flex-col place-items-center">
+      <div>
+        <div className="flex w-full justify-end">
+          <button onClick={handlePlay} className="bg-customRed px-2">
+            {!play ? 'Play' : 'Pause'}
+          </button>
         </div>
-      ))}
+        <div className="flex gap-8">
+          <div className="flex flex-col justify-evenly gap-1 rounded-lg bg-customRed px-2">
+            {['Hat', 'Snare', 'Kick', 'Bongo'].map((drum, i) => (
+              <h5 key={i} className="rounded-md bg-customBlue p-2 text-center">
+                {drum}
+              </h5>
+            ))}
+          </div>
+          <div>
+            {grid.map((col, rowIdx) => (
+              <div key={rowIdx} className="flex gap-6 py-2">
+                {col.map((note, noteIdx) => (
+                  <button
+                    disabled={!loaded}
+                    className={`h-8 w-8  ${
+                      note.isActive
+                        ? 'rounded-lg bg-customGreen'
+                        : 'rounded-md bg-customWhite'
+                    }`}
+                    onClick={() => handleNoteClick(rowIdx, noteIdx)}
+                    key={`note-${rowIdx}-${noteIdx}`}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

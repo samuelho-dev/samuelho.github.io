@@ -50,8 +50,8 @@ function Home({ handleRoute }: HomeProps) {
             <Image src={projectJPG} alt="project jpg" className="object-fill" />
           </div>
         </div>
-        <div className="col-span-2 row-span-2 h-full w-full bg-customYellow">
-          <h5>Make a beat...</h5>
+        <div className="col-span-2 row-span-2 h-full w-full items-center justify-center bg-customYellow">
+          <h1>Make A Beat!</h1>
           <StepSequencer />
         </div>
 
