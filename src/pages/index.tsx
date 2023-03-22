@@ -7,6 +7,7 @@ import Canvas from '@/game/Canvas';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Routes from '../../types/types';
+import StepSequencer from '@/components/StepSequencer';
 
 interface HomeProps {
   handleRoute: Routes['handleRoute'];
@@ -50,7 +51,8 @@ function Home({ handleRoute }: HomeProps) {
           </div>
         </div>
         <div className="col-span-2 row-span-2 h-full w-full bg-customYellow">
-          <h5>Odd</h5>
+          <h5>Make a beat...</h5>
+          <StepSequencer />
         </div>
 
         {gameModal && (
