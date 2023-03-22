@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Form } from '../../types/types';
 
-function validate(form) {
+function validate(form: Form) {
   if (!form.name) {
     alert('Name is a required field');
     return false;
@@ -34,7 +35,7 @@ function Contact() {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     console.log('hello');
     e.preventDefault();
     if (!validate(form)) return;

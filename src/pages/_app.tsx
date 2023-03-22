@@ -9,6 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const handleRoute = (curPage: string) => {
     router.push(`/${curPage}`, undefined, { shallow: true });
   };
+
   return (
     <>
       <Head>

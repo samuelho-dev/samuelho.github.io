@@ -6,9 +6,13 @@ import Canvas from '@/game/Canvas';
 
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { createPortal } from 'react-dom';
+import Routes from '../../types/types';
 
-function Home({ handleRoute }) {
+interface HomeProps {
+  handleRoute: Routes['handleRoute'];
+}
+
+function Home({ handleRoute }: HomeProps) {
   const [gameModal, setGameModal] = useState(false);
   const handleGameModal = () => {
     setGameModal(!gameModal);

@@ -1,12 +1,13 @@
 import Navbar from '@/layout/Navbar';
 import Footer from './Footer';
+import Routes from '../../types/types';
 
-interface Props {
+interface LayoutProps {
   children: any;
-  handleRoute: Function;
+  handleRoute: Routes['handleRoute'];
 }
 
-export default function Layout({ children, handleRoute }: Props) {
+export default function Layout({ children, handleRoute }: LayoutProps) {
   return (
     <>
       <header className="flex w-full justify-between">
