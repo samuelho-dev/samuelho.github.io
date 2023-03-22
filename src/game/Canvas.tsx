@@ -33,9 +33,9 @@ function Canvas({ handleGameModal, gameModal }: CanvasProps) {
     }
   }, []);
 
-  const handleRefClick = (e) => {
+  const handleRefClick = (e: any) => {
     if (e.target !== canvasRef.current) {
-      handleGameModal();
+      // handleGameModal();
     }
   };
 
