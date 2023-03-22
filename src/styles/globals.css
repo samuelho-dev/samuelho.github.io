@@ -16,10 +16,15 @@ h1 {
   color: white;
 }
 h2 {
+  font-size: larger;
+  color: white;
+}
+h3 {
   font-size: large;
   color: white;
 }
 
 h5 {
-  font-size: large;
+  font-size: medium;
+  color: white;
 }
