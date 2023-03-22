@@ -30,7 +30,7 @@ function Contact() {
   });
   const [submit, setSubmit] = useState(false);
 
-  const handleForm = (e) => {
+  const handleForm = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
