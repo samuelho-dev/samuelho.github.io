@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import Routes from '../../types/types';
 
-function Game({ handleGameModal, gameModal }: Routes) {
+interface GameProps {
+  handleGameModal: Routes['handleGameModal'];
+  gameModal: Routes['gameModal'];
+}
+
+function Game({ handleGameModal, gameModal }: GameProps) {
   return (
     <div className="flex h-full w-full items-center justify-center">
       {gameModal ? (
