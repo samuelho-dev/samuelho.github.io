@@ -4,29 +4,25 @@ import { RiFileDownloadLine } from 'react-icons/ri';
 import { TbArrowBadgeRight } from 'react-icons/tb';
 import { gsap } from 'gsap';
 import Link from 'next/link';
-
+import { Experience } from '../../types/types';
 function WorkHistory() {
   const experience = data.workExperience;
-  const [detail, setDetail] = useState<object>(data.workExperience[0]);
+  const [detail, setDetail] = useState<Experience>(data.workExperience[0]);
   const containerRef = useRef<HTMLDivElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
   const underlineRef = useRef<HTMLDivElement>(null);
 
-  const handleDetails = (e, entry) => {
+  const handleDetails = (
+    e: React.MouseEvent<HTMLHeadingElement, MouseEvent>,
+    entry: Experience,
+  ) => {
     e.preventDefault();
     setDetail(entry);
   };
 
-  const handleUnderlineHover = (e) => {
-    gsap.to(e.target, { borderBottomWidth: '100%' });
-  };
-
-  const handleUnderlineLeave = (e) => {
-    gsap.to(e.target, { borderBottomWidth: '0%' });
-  };
-
   return (
-    <section className="flex h-1/2 max-w-5xl items-center justify-center py-24">
+    <section className="flex h-1/2 max-w-5xl flex-col justify-center gap-4 py-16">
+      <h2 className="text-slate-200">Work History</h2>
       <div className="mx-8 flex rounded-xl bg-customWhite">
         <div
           ref={containerRef}
@@ -56,20 +52,18 @@ function WorkHistory() {
         </div>
         <div ref={detailRef} className="w-1/2 p-6">
           <div className="flex items-start justify-between">
-            <div className="flex flex-wrap gap-1">
-              <h5>{detail.title}</h5>
-              <div
-                className="flex cursor-pointer gap-1 text-customBlue"
-                onMouseEnter={handleUnderlineHover}
-                onMouseLeave={handleUnderlineLeave}
-              >
-                <h5>@</h5>
-                <h5 className="border-b-2 border-transparent transition duration-300 hover:border-customBlue">
-                  {detail.employer}
-                </h5>
+            <div className="flex flex-wrap gap-1 ">
+              <h2 className="text-black">{detail.title}</h2>
+              <div className="flex cursor-pointer gap-1 ">
+                <h2 className="text-customBlue">@</h2>
+                <a href={detail.employer_url} target="_blank">
+                  <h2 className="border-b-2 border-transparent text-customBlue transition duration-300 hover:border-customBlue">
+                    {detail.employer}
+                  </h2>
+                </a>
               </div>
             </div>
-            <div>
+            <div className="min-w-fit">
               <p>{detail.location}</p>
               <sub className="tracking-wide">{detail.dates}</sub>
             </div>

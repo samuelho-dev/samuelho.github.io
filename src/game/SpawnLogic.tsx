@@ -2,7 +2,7 @@ import { gsap } from 'gsap';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import * as THREE from 'three';
 
-function SpawnLogic(scene) {
+function SpawnLogic(scene: any) {
   loadGLTFModel().then((object) => {
     const animatedObj = Position(object);
     animatedObj.customRotationX = Math.PI * Math.random();
@@ -38,7 +38,7 @@ function loadGLTFModel() {
   });
 }
 
-function Position(object) {
+function Position(object: any) {
   const scale = 0.05;
   object.position.x = Math.random() * 10;
   object.position.y = 10;
@@ -46,7 +46,7 @@ function Position(object) {
   return object;
 }
 
-function AnimateFall(object) {
+function AnimateFall(object: any) {
   gsap.to(object.position, {
     duration: 5,
     y: -10,
@@ -61,7 +61,7 @@ function AnimateFall(object) {
   animateRotation(object.rotation, 'z', object.customRotationZ);
 }
 
-function animateRotation(rotation, axis, customRotation) {
+function animateRotation(rotation: any, axis: any, customRotation: any) {
   const initialRotation = rotation[axis];
   gsap.to(rotation, {
     duration: 0.3,

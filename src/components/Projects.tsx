@@ -33,6 +33,7 @@ function Projects() {
   };
   return (
     <section className="max-w-6xl">
+      <h2 className=" text-slate-200">Projects</h2>
       <ul className="flex flex-col items-center gap-4">
         {projects.map((project, i) => (
           <li
@@ -92,7 +93,7 @@ function Projects() {
                 </p>
               </div>
 
-              <div className={`flex justify-end gap-4 `}>
+              <div className={`flex gap-4 ${i % 2 === 0 && 'justify-end'} `}>
                 {project.technologies.map((tech, k) => (
                   <div key={k} className={`flex items-center gap-2 pt-4`}>
                     <div>{iconmap[tech]}</div>

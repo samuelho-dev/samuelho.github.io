@@ -2,8 +2,14 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import GameLogic from './GameLogic';
 import SpawnLogic from './SpawnLogic';
+import Routes from '../../types/types';
 
-function Canvas({ handleGameModal, gameModal }) {
+interface CanvasProps {
+  handleGameModal: Routes['handleGameModal'];
+  gameModal: Routes['gameModal'];
+}
+
+function Canvas({ handleGameModal, gameModal }: CanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
