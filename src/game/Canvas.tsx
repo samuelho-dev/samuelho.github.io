@@ -64,7 +64,7 @@ function createCamera() {
   return camera;
 }
 
-function createRenderer(canvasRef) {
+function createRenderer(canvasRef: any) {
   const renderer = new THREE.WebGLRenderer({
     canvas: canvasRef.current,
     alpha: true,
@@ -82,7 +82,7 @@ function createLight() {
   return light;
 }
 
-function animate(renderer, scene, camera) {
+function animate(renderer: any, scene: any, camera: any) {
   const loop = () => {
     requestAnimationFrame(loop);
     renderer.render(scene, camera);
