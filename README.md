@@ -1,8 +1,8 @@
 ## Welcome to my portfolio site!
 
-![frontpage]('')
+![frontpage]('https://github.com/samuelho-dev/portfolio/blob/f159103731ef48f2d8a26ebf6297a2579eedc00f/public/images/frontpage.png')
 
-## Installation % Setup
+## Installation & Setup
 
 First, install the necessary dependencies and run the development server:
 
@@ -25,4 +25,4 @@ npm run dev
 ## You can..
 
 - Make a beat!
-  ![beatmaker]('')
+  ![beatmaker]('https://github.com/samuelho-dev/portfolio/blob/f159103731ef48f2d8a26ebf6297a2579eedc00f/public/images/beatmaker.png')
