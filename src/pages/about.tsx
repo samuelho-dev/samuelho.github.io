@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { TbBrandMongodb } from 'react-icons/tb';
 import { IoLogoNodejs } from 'react-icons/io';
+import { FaAws } from 'react-icons/fa';
 import {
   SiJavascript,
   SiTypescript,
@@ -80,8 +81,8 @@ function about() {
               <sub>Typescript</sub>
             </li>
             <li className="flex items-center gap-2">
-              <SiJavascript />
-              <sub>JavaScript</sub>
+              <FaAws />
+              <sub>AWS</sub>
             </li>
             <li className="flex items-center gap-2">
               <IoLogoNodejs />
