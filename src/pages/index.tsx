@@ -1,7 +1,7 @@
 import Game from '@/components/Game';
 import SomethingWeird from '@/components/SomethingWeird';
-import workJPG from '../../public/images/study.jpg';
-import projectJPG from '../../public/images/project.jpg';
+import workJPG from 'public/images/study.jpg';
+import projectJPG from 'public/images/project.jpg';
 import Canvas from '@/game/Canvas';
 
 import Image from 'next/image';
@@ -50,8 +50,8 @@ function Home({ handleRoute }: HomeProps) {
             <Image src={projectJPG} alt="project jpg" className="object-fill" />
           </div>
         </div>
-        <div className="col-span-2 row-span-2 h-full w-full items-center justify-center bg-customYellow">
-          <h1>Make A Beat!</h1>
+        <div className="col-span-2 row-span-2 my-2 h-full w-full items-center justify-center bg-customYellow px-4">
+          <h2>Make A Beat!</h2>
           <StepSequencer />
         </div>
 

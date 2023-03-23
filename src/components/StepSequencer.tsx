@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useRef, useState } from 'react';
 import * as Tone from 'tone';
 import { Sampler, Transport } from 'tone';
 import hiHat from 'public/sounds/NAMI_Hi-Hat_Armani.wav';
 import Snare from 'public/sounds/RL_-_Razor_Snare.wav';
 import Kick from 'public/sounds/Slappy_Kick_35.wav';
 import Bongo from 'public/sounds/SD3_BONGO33.wav';
+
+import { gsap } from 'gsap';
 
 const notes = [hiHat, Snare, Kick, Bongo];
 
@@ -37,13 +39,14 @@ function StepSequencer() {
 
   let beat = 0;
   const handleLoop = () => {
-    const repeat = (time) => {
-      grid.forEach((row) => {
+    const repeat = (time: any) => {
+      grid.forEach((row, rowIndex) => {
         const note = row[beat];
         if (note.isActive) {
           stepSequencer.current?.triggerAttackRelease(note.key, '8n', time);
         }
       });
+
       beat = (beat + 1) % 8;
     };
 
@@ -59,12 +62,13 @@ function StepSequencer() {
     }
 
     if (play) {
+      Tone.Transport.cancel();
       Tone.Transport.stop();
       setPlay(false);
     } else {
+      handleLoop();
       Tone.Transport.start();
       setPlay(true);
-      handleLoop();
     }
   };
 
@@ -74,10 +78,23 @@ function StepSequencer() {
     setGrid(copyGrid);
   };
 
+  const handleBpmChange = (e: any) => {
+    setTempo(e.target.value);
+  };
+
   return (
     <div className="flex w-full flex-col place-items-center">
       <div>
-        <div className="flex w-full justify-end">
+        <div className="flex w-full justify-end gap-4">
+          <div className="flex gap-2">
+            <label>Tempo :</label>
+            <input
+              type="number"
+              className="w-12"
+              value={tempo}
+              onChange={handleBpmChange}
+            />
+          </div>
           <button onClick={handlePlay} className="bg-customRed px-2">
             {!play ? 'Play' : 'Pause'}
           </button>
