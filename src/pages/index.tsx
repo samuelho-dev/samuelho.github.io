@@ -1,6 +1,5 @@
 import Game from '@/components/Game';
 import SomethingWeird from '@/components/SomethingWeird';
-import projectJPG from 'public/images/project.jpg';
 import Canvas from '@/game/Canvas';
 
 import Image from 'next/image';

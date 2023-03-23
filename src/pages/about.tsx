@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import data from '../../util/resume.json';
 import Link from 'next/link';
 import { TbBrandMongodb } from 'react-icons/tb';
 import { IoLogoNodejs } from 'react-icons/io';
