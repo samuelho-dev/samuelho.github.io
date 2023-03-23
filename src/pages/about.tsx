@@ -35,8 +35,8 @@ function about() {
             Economics and in my previous roles, I had worked in corporate
             lending and FP&A, but I had always been drawn towards the creative
             and problem solving aspects of software engineering. Through
-            software and design I felt empowered to draw my own solutions to
-            problems I faced daily.
+            software and design I felt empowered to develop my own solutions and
+            tools.
             <br></br>
             In June 2022, I decided to make the leap into the world of software
             and began learning the basics of development which led me to study
