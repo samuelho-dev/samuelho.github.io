@@ -1,6 +1,6 @@
 ## Welcome to my portfolio site!
 
-![frontpage]('https://res.cloudinary.com/ddhal4lbv/image/upload/v1679613938/Portfolio/frontpage_h96wuh.png')
+![frontpage]('public/images/frontpages.png')
 
 ## Installation & Setup
 
@@ -25,4 +25,4 @@ npm run dev
 ## You can..
 
 - Make a beat!
-  ![beatmaker]('https://res.cloudinary.com/ddhal4lbv/image/upload/v1679613935/Portfolio/beatmaker_n34dbh.png')
+  ![beatmaker]('public/images/beatmaker')
