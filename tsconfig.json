@@ -14,10 +14,22 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@static/*": ["./public/static/*"],
+      "@generated/*": ["./src/__generated__/*"],
+      "@*": ["./src*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "typeRoots": ["node_modules/@types", "types/"],
+  "include": [
+    "next-env.d.ts",
+    "src",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.js",
+    "public"
+  ],
   "exclude": ["node_modules"]
 }
+// removed src from baseurl "paths": { // ensure paths were updated relative to base url "@static/*": ["./public/static/*"], "@generated/*": ["./src/__generated__/*"], "@*": ["./src*"] } "include": [ "src", // add src directory to be included "next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js", "public" ],
