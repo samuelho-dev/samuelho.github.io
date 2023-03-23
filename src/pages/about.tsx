@@ -16,8 +16,8 @@ import { gsap } from 'gsap';
 
 function about() {
   return (
-    <section className="flex flex-col items-center justify-center">
-      <div className="flex  w-3/4  max-w-6xl items-center justify-center gap-4">
+    <section className="flex flex-col items-center justify-center px-2">
+      <div className="flex w-full max-w-6xl flex-col items-center justify-center gap-4 md:w-3/4 md:flex-row">
         <div className="w-fit bg-customLightPink hover:bg-none">
           <div className="mix-blend-darken grayscale filter hover:filter-none">
             <Image
@@ -28,7 +28,7 @@ function about() {
             />
           </div>
         </div>
-        <div className="flex w-1/2 flex-col">
+        <div className="flex flex-col px-2 md:w-1/2">
           <p>
             Hey! My name is Samuel and I have a passion for building cool
             products. I graduated from UC Santa Barbara in 2018 with a B.A in
@@ -64,8 +64,8 @@ function about() {
             >
               here
             </Link>{' '}
-            for my resume.
-            <br></br>
+            for my resume or you can reach me at{' '}
+            <ins>samuelho343@gmail.com</ins>.<br></br>
             On the side I enjoy making music and recently have been enjoying
             getting into 3D art.
           </p>

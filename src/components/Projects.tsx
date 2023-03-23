@@ -38,27 +38,28 @@ function Projects() {
         {projects.map((project, i) => (
           <li
             key={i}
-            className={`flex w-fit gap-4 p-6 ${
-              i % 2 !== 0 && 'flex-row-reverse'
+            className={`flex w-fit flex-col gap-4  md:flex-row md:p-6 ${
+              i % 2 !== 0 && 'md:flex-row-reverse'
             }`}
           >
             <div
               className={`z-0 w-fit bg-customLightPink hover:bg-none ${
-                i % 2 !== 0 && 'ml-[-10%]'
+                i % 2 !== 0 && 'md:ml-[-10%]'
               }`}
             >
               <div className="mix-blend-darken grayscale filter hover:filter-none">
                 <Image
                   src={project.image}
                   alt={project.name}
-                  width={500}
                   height={500}
+                  width={500}
+                  className="object-scale-down"
                 />
               </div>
             </div>
             <div
-              className={`z-10 flex w-1/2 flex-col justify-center ${
-                i % 2 === 0 && 'ml-[-10%]'
+              className={`z-10 flex w-full flex-col justify-center md:w-1/2 ${
+                i % 2 === 0 && 'md:ml-[-10%]'
               }`}
             >
               <div
@@ -93,11 +94,15 @@ function Projects() {
                 </p>
               </div>
 
-              <div className={`flex gap-4 ${i % 2 === 0 && 'justify-end'} `}>
+              <div
+                className={`flex flex-wrap gap-2 md:flex-nowrap md:gap-4 ${
+                  i % 2 === 0 && 'justify-end'
+                } `}
+              >
                 {project.technologies.map((tech, k) => (
                   <div key={k} className={`flex items-center gap-2 pt-4`}>
                     <div>{iconmap[tech]}</div>
-                    <sub className=" whitespace-nowrap text-slate-300">
+                    <sub className=" text-slate-300 md:whitespace-nowrap">
                       {tech}
                     </sub>
                   </div>

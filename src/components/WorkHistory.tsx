@@ -21,12 +21,12 @@ function WorkHistory() {
   };
 
   return (
-    <section className="flex h-1/2 max-w-5xl flex-col justify-center gap-4 py-16">
+    <section className="flex h-1/2 max-w-5xl flex-col justify-center gap-4 py-0 md:py-16">
       <h2 className="text-slate-200">Work History</h2>
-      <div className="mx-8 flex rounded-xl bg-customWhite">
+      <div className=" flex flex-col rounded-xl bg-customWhite md:flex-row">
         <div
           ref={containerRef}
-          className="flex w-1/2 flex-col gap-6 rounded-xl bg-customOrange p-6"
+          className="flex w-full flex-col gap-6 rounded-xl bg-customOrange p-4 md:w-1/2 md:p-6"
         >
           <div className="flex items-center justify-between">
             <h1>Previously..</h1>
@@ -38,32 +38,34 @@ function WorkHistory() {
               <RiFileDownloadLine className="h-8 w-6" color="white" />
             </Link>
           </div>
-          {experience.map((entry, i) => (
-            <h2
-              key={i}
-              onClick={(e) => {
-                handleDetails(e, entry);
-              }}
-              className="flex justify-between rounded-xl bg-customOrange p-6 outline-dotted hover:outline-double"
-            >
-              {entry.employer}
-            </h2>
-          ))}
+          <div className="flex flex-row gap-4 md:flex-col">
+            {experience.map((entry, i) => (
+              <h2
+                key={i}
+                onClick={(e) => {
+                  handleDetails(e, entry);
+                }}
+                className="flex cursor-pointer justify-between rounded-xl bg-customOrange p-2 outline-dotted hover:outline-double md:p-6"
+              >
+                {entry.employer}
+              </h2>
+            ))}
+          </div>
         </div>
-        <div ref={detailRef} className="w-1/2 p-6">
-          <div className="flex items-start justify-between">
+        <div ref={detailRef} className="w-full p-6 md:w-1/2">
+          <div className="flex flex-col items-start justify-between md:flex-row">
             <div className="flex flex-wrap gap-1 ">
-              <h2 className="text-black">{detail.title}</h2>
+              <h3 className="text-black">{detail.title}</h3>
               <div className="flex cursor-pointer gap-1 ">
-                <h2 className="text-customBlue">@</h2>
+                <h3 className="text-customBlue">@</h3>
                 <a href={detail.employer_url} target="_blank">
-                  <h2 className="border-b-2 border-transparent text-customBlue transition duration-300 hover:border-customBlue">
+                  <h3 className="border-b-2 border-transparent text-customBlue transition duration-300 hover:border-customBlue">
                     {detail.employer}
-                  </h2>
+                  </h3>
                 </a>
               </div>
             </div>
-            <div className="min-w-fit">
+            <div className="flex w-full items-center justify-between md:w-fit md:flex-col  ">
               <p>{detail.location}</p>
               <sub className="tracking-wide">{detail.dates}</sub>
             </div>
