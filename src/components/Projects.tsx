@@ -34,7 +34,7 @@ function Projects() {
   return (
     <section className="max-w-6xl">
       <h2 className=" text-slate-200">Projects</h2>
-      <ul className="flex flex-col items-center gap-4">
+      <ul className="flex flex-col items-center gap-24 md:gap-4">
         {projects.map((project, i) => (
           <li
             key={i}
