@@ -6,6 +6,7 @@ interface Routes {
   gameModal: boolean;
 }
 export default Routes;
+
 export interface Experience {
   employer: string;
   employer_url: string;
@@ -20,4 +21,9 @@ export interface Form {
   email: string;
   subject: string;
   message: string;
+}
+
+export interface Note {
+  source: string;
+  playing: boolean;
 }
