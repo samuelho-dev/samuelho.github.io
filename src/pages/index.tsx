@@ -1,6 +1,5 @@
 import Game from '@/components/Game';
 import SomethingWeird from '@/components/SomethingWeird';
-import workJPG from 'public/images/study.jpg';
 import projectJPG from 'public/images/project.jpg';
 import Canvas from '@/game/Canvas';
 
@@ -15,6 +14,7 @@ interface HomeProps {
 
 function Home({ handleRoute }: HomeProps) {
   const [gameModal, setGameModal] = useState(false);
+
   const handleGameModal = () => {
     setGameModal(!gameModal);
   };
@@ -34,7 +34,11 @@ function Home({ handleRoute }: HomeProps) {
         >
           <h5>Work</h5>
           <div className="relative h-1/2 w-2/3">
-            <Image src={workJPG} alt="work jpg" fill className="object-cover" />
+            <Image
+              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679542756/Portfolio/color_lenoau.jpg"
+              alt="work jpg"
+              fill
+            />
           </div>
         </div>
         <div className=" col-span-1 row-span-1 flex h-full w-full flex-col items-center bg-customLightPink">
@@ -42,12 +46,16 @@ function Home({ handleRoute }: HomeProps) {
           <Game handleGameModal={handleGameModal} gameModal={gameModal} />
         </div>
         <div
-          className="col-span-1 row-span-1 flex h-full w-1/2 cursor-pointer flex-col items-center justify-center bg-customBlue py-5"
+          className="col-span-1 row-span-1 flex h-full w-3/4 cursor-pointer flex-col items-center justify-center bg-customBlue px-10 py-5"
           onClick={() => handleRoute('about')}
         >
           <h5>About Me</h5>
-          <div className="relative w-2/3">
-            <Image src={projectJPG} alt="project jpg" className="object-fill" />
+          <div className="relative h-full w-full">
+            <Image
+              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679543020/Portfolio/frame_foxlih.jpg"
+              fill
+              alt="project jpg"
+            />
           </div>
         </div>
         <div className="col-span-2 row-span-2 my-2 h-full w-full items-center justify-center bg-customYellow px-4">

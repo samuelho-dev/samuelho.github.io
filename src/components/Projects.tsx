@@ -49,7 +49,7 @@ function Projects() {
             >
               <div className="mix-blend-darken grayscale filter hover:filter-none">
                 <Image
-                  src={`/${project.name}.png`}
+                  src={project.image}
                   alt={project.name}
                   width={500}
                   height={500}
