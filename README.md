@@ -1,6 +1,6 @@
 ## Welcome to my portfolio site!
 
-![frontpage]('/images/frontpages.png')
+![frontpage](/images/frontpages.png)
 
 ## Installation & Setup
 
@@ -25,4 +25,4 @@ npm run dev
 ## You can..
 
 - Make a beat!
-  ![beatmaker]('/images/beatmaker')
+  ![beatmaker](/images/beatmaker)
