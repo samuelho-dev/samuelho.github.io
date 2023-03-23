@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 function SomethingWeird() {
-  const eyesRef = useRef(null);
+  const eyesRef = useRef<HTMLDivElement>(null);
   const [mouseCoordinates, setMouseCoordinates] = useState({ x: 0, y: 0 });
 
   const handleEyesMove = () => {
