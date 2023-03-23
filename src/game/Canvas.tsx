@@ -10,32 +10,32 @@ interface CanvasProps {
 }
 
 function Canvas({ handleGameModal, gameModal }: CanvasProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<any>(null);
 
-  useEffect(() => {
-    const scene = createScene();
-    if (gameModal) {
-      const camera = createCamera();
-      const renderer = createRenderer(canvasRef);
-      const light = createLight();
-      scene.add(light);
+  // useEffect(() => {
+  //   const scene = createScene();
+  //   if (gameModal) {
+  //     const camera = createCamera();
+  //     const renderer = createRenderer(canvasRef);
+  //     const light = createLight();
+  //     scene.add(light);
 
-      SpawnLogic(scene);
+  //     SpawnLogic(scene);
 
-      animate(renderer, scene, camera);
-    } else {
-      let obj;
-      for (var i = scene.children.length - 1; i >= 0; i--) {
-        obj = scene.children[i];
-        console.log('here deleting');
-        scene.remove(obj);
-      }
-    }
-  }, []);
+  //     animate(renderer, scene, camera);
+  //   } else {
+  //     let obj;
+  //     for (var i = scene.children.length - 1; i >= 0; i--) {
+  //       obj = scene.children[i];
+  //       console.log('here deleting');
+  //       scene.remove(obj);
+  //     }
+  //   }
+  // }, []);
 
   const handleRefClick = (e: any) => {
     if (e.target !== canvasRef.current) {
-      // handleGameModal();
+      handleGameModal(e);
     }
   };
 
@@ -44,7 +44,13 @@ function Canvas({ handleGameModal, gameModal }: CanvasProps) {
       onClick={handleRefClick}
       className="absolute top-0 flex h-full w-full items-center justify-center bg-black bg-opacity-30"
     >
-      <canvas ref={canvasRef}></canvas>
+      <div
+        ref={canvasRef}
+        className="flex h-1/4 w-1/4 items-center justify-center bg-customGreen text-center"
+      >
+        <h1>DEMO COMING SOON</h1>
+      </div>
+      {/* <canvas ></canvas> */}
     </div>
   );
 }
