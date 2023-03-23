@@ -99,23 +99,26 @@ function StepSequencer() {
             {!play ? 'Play' : 'Pause'}
           </button>
         </div>
-        <div className="flex gap-8">
-          <div className="flex flex-col justify-evenly gap-1 rounded-lg bg-customRed px-2">
+        <div className="flex gap-4 md:gap-8">
+          <div className="flex flex-col justify-evenly gap-1 rounded-lg bg-customRed px-0 md:px-2">
             {['Hat', 'Snare', 'Kick', 'Bongo'].map((drum, i) => (
-              <h5 key={i} className="rounded-md bg-customBlue p-2 text-center">
+              <h5
+                key={i}
+                className="rounded-md bg-customBlue px-0 text-center md:px-2"
+              >
                 {drum}
               </h5>
             ))}
           </div>
           <div>
             {grid.map((col, rowIdx) => (
-              <div key={rowIdx} className="flex gap-6 py-2">
+              <div key={rowIdx} className="flex gap-2 py-2 md:gap-4">
                 {col.map((note, noteIdx) => (
                   <button
                     disabled={!loaded}
-                    className={`h-8 w-8  ${
+                    className={`h-4 w-4 md:h-8 md:w-8 ${
                       note.isActive
-                        ? 'rounded-lg bg-customGreen'
+                        ? 'rounded-lg bg-customBlue'
                         : 'rounded-md bg-customWhite'
                     }`}
                     onClick={() => handleNoteClick(rowIdx, noteIdx)}
