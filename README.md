@@ -1,6 +1,6 @@
 ## Welcome to my portfolio site!
 
-![frontpage]('https://github.com/samuelho-dev/portfolio/blob/f159103731ef48f2d8a26ebf6297a2579eedc00f/public/images/frontpage.png')
+![frontpage]('https://res.cloudinary.com/ddhal4lbv/image/upload/v1679613938/Portfolio/frontpage_h96wuh.png')
 
 ## Installation & Setup
 
@@ -25,4 +25,4 @@ npm run dev
 ## You can..
 
 - Make a beat!
-  ![beatmaker]('https://github.com/samuelho-dev/portfolio/blob/f159103731ef48f2d8a26ebf6297a2579eedc00f/public/images/beatmaker.png')
+  ![beatmaker]('https://res.cloudinary.com/ddhal4lbv/image/upload/v1679613935/Portfolio/beatmaker_n34dbh.png')
