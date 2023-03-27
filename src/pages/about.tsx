@@ -22,7 +22,7 @@ function about() {
         <div className="w-fit bg-customLightPink hover:bg-none">
           <div className="mix-blend-darken grayscale filter hover:filter-none">
             <Image
-              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679541608/Portfolio/profile_xabblb.jpg"
+              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679961213/525F8B4C-5303-4E2E-B816-A605BB0455A7_1_105_c_ordpsi.jpg"
               height={100}
               width={300}
               alt="profile"
