@@ -126,7 +126,7 @@ function Projects() {
           </li>
         ))}
       </ul>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 pt-12">
         <h5>Other Projects</h5>
         <div className="flex flex-col md:flex-row">
           {otherProjects.map((project, i) => (
