@@ -92,7 +92,7 @@
     },
     {
       "name": "Fashion Ecommerce Site",
-      "description": "Fully functional ecommerce store with extensive product selections and articles.",
+      "description": "Functional ecommerce front-end with extensive product selections and articles.",
       "technologies": ["React"],
       "source": "https://samuelho-fashion-ecommerce.vercel.app/"
     }
