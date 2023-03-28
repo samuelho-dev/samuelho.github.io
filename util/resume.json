@@ -86,7 +86,7 @@
   "otherProjects": [
     {
       "name": "Market Analysis API with GPT (currently experimenting)",
-      "description": "An API built with Flask, and utilizing GPT API, to provides market insights utilizing news articles about top players in each industry to gain insights on market sentiment.",
+      "description": "An API built with Flask, and utilizing GPT API and news articles about top players in each industry to gain insights on market sentiment.",
       "technologies": ["Flask", "Python", "Open AI"],
       "source": "https://github.com/samuelho-dev/marketanalyticsapi"
     },
