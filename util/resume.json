@@ -50,7 +50,7 @@
     }
   ],
 
-  "projects": [
+  "featuredProjects": [
     {
       "name": "Swapesy",
       "role": "PM/Engineer",
@@ -81,6 +81,20 @@
       "technologies": ["Javascript", "Node", "PostgreSQL", "Sequelize", "AWS"],
       "source": "https://github.com/sunChips-mysteryFlavor",
       "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1679541608/Portfolio/SunChip_nh1pxx.png"
+    }
+  ],
+  "otherProjects": [
+    {
+      "name": "Market Analysis API with GPT (currently experimenting)",
+      "description": "An API built with Flask, and utilizing GPT API, to provides market insights utilizing news articles about top players in each industry to gain insights on market sentiment.",
+      "technologies": ["Flask", "Python", "Open AI"],
+      "source": "https://github.com/samuelho-dev/marketanalyticsapi"
+    },
+    {
+      "name": "Fashion Ecommerce Site",
+      "description": "Fully functional ecommerce store with extensive product selections and articles.",
+      "technologies": ["React"],
+      "source": "https://samuelho-fashion-ecommerce.vercel.app/"
     }
   ]
 }
