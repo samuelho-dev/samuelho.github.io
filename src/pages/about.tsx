@@ -31,13 +31,11 @@ function about() {
         </div>
         <div className="flex flex-col px-2 md:w-1/2">
           <p>
-            Hey! My name is Samuel and I have a passion for building cool
-            products. I graduated from UC Santa Barbara in 2018 with a B.A in
-            Economics and in my previous roles, I had worked in corporate
-            lending and FP&A, but I had always been drawn towards the creative
-            and problem solving aspects of software engineering. Through
-            software and design I felt empowered to develop my own solutions and
-            tools.
+            Hello! My name is Samuel, a versatile professional with a strong
+            foundation in both Economics and software engineering. I graduated
+            from UC Santa Barbara in 2018 with a B.A. in Economics, and have
+            experience in corporate lending and FP&A. I find that my passion
+            lies in crafting solutions through data and design.
             <br></br>
             In June 2022, I decided to make the leap into the world of software
             and began learning the basics of development which led me to study
