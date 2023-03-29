@@ -82,14 +82,6 @@ function about() {
               <sub>Typescript</sub>
             </li>
             <li className="flex items-center gap-2">
-              <SiPython />
-              <sub>Python</sub>
-            </li>
-            <li className="flex items-center gap-2">
-              <SiFlask />
-              <sub>Flask</sub>
-            </li>
-            <li className="flex items-center gap-2">
               <FaAws />
               <sub>AWS</sub>
             </li>
@@ -108,6 +100,14 @@ function about() {
             <li className="flex items-center gap-2">
               <TbBrandMongodb />
               <sub>MongoDB</sub>
+            </li>
+            <li className="flex items-center gap-2">
+              <SiPython />
+              <sub>Python</sub>
+            </li>
+            <li className="flex items-center gap-2">
+              <SiFlask />
+              <sub>Flask</sub>
             </li>
             <li className="flex items-center gap-2">
               <SiAbletonlive />
