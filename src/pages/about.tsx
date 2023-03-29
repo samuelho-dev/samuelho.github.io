@@ -12,6 +12,9 @@ import {
   SiAbletonlive,
   SiBlender,
   SiAdobe,
+  SiReact,
+  SiPython,
+  SiFlask,
 } from 'react-icons/si';
 import { gsap } from 'gsap';
 
@@ -68,7 +71,7 @@ function about() {
             On the side I enjoy making music and recently have been enjoying
             getting into 3D art.
           </p>
-          <p>Some technologies I work with:</p>
+          <p>Some technologies I have been working with:</p>
           <ul className="inline-grid grid-cols-3 gap-2 py-2">
             <li className="flex items-center gap-2">
               <SiNextdotjs />
@@ -79,8 +82,20 @@ function about() {
               <sub>Typescript</sub>
             </li>
             <li className="flex items-center gap-2">
+              <SiPython />
+              <sub>Python</sub>
+            </li>
+            <li className="flex items-center gap-2">
+              <SiFlask />
+              <sub>Flask</sub>
+            </li>
+            <li className="flex items-center gap-2">
               <FaAws />
               <sub>AWS</sub>
+            </li>
+            <li className="flex items-center gap-2">
+              <SiReact />
+              <sub>React</sub>
             </li>
             <li className="flex items-center gap-2">
               <IoLogoNodejs />
@@ -88,7 +103,7 @@ function about() {
             </li>
             <li className="flex items-center gap-2">
               <SiPostgresql />
-              <sub>SQL</sub>
+              <sub>PostgreSQL</sub>
             </li>
             <li className="flex items-center gap-2">
               <TbBrandMongodb />
