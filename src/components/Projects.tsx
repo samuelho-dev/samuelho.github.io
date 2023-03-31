@@ -68,6 +68,7 @@ function Projects() {
                   height={500}
                   width={500}
                   className="object-scale-down"
+                  loading="lazy"
                 />
               </div>
             </div>

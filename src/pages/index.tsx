@@ -38,6 +38,7 @@ function Home({ handleRoute }: HomeProps) {
               alt="work jpg"
               fill
               className="object-contain"
+              loading="lazy"
             />
           </div>
         </div>
@@ -56,6 +57,7 @@ function Home({ handleRoute }: HomeProps) {
               fill
               alt="project jpg"
               className="object-contain"
+              loading="lazy"
             />
           </div>
         </div>

@@ -29,6 +29,7 @@ function about() {
               height={100}
               width={300}
               alt="profile"
+              loading="lazy"
             />
           </div>
         </div>
