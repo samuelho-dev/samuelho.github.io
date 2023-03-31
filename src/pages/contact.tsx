@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Form } from '../../types/types';
 
 function validate(form: Form) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!form.name) {
     alert('Name is a required field');
     return false;
   }
-  if (!form.email) {
-    alert('Email is a required field');
+  if (!form.email || !emailRegex.test(form.email)) {
+    alert('Email is missing or in an invalid format.');
     return false;
   }
   if (!form.subject) {
