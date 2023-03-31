@@ -7,15 +7,15 @@ function validate(form: Form) {
     return false;
   }
   if (!form.email) {
-    alert('Name is a required field');
+    alert('Email is a required field');
     return false;
   }
   if (!form.subject) {
-    alert('Name is a required field');
+    alert('Subject is a required field');
     return false;
   }
   if (!form.message) {
-    alert('Name is a required field');
+    alert('Message is a required field');
     return false;
   }
   return true;
@@ -36,23 +36,20 @@ function Contact() {
   };
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
-    console.log('hello');
     e.preventDefault();
     if (!validate(form)) return;
     try {
-      await fetch('/api/mail', {
+      fetch('/api/mail', {
         method: 'POST',
         body: JSON.stringify(form),
-      });
-      setSubmit(true);
+      }).then(() => setSubmit(true));
     } catch (err) {
       console.error(err);
     }
   };
   return (
-    <div className="flex h-full w-full items-center justify-center">
-      <div className="flex h-full w-1/2 flex-col items-center gap-20 rounded-3xl bg-customYellow p-4">
-        <h1 className="max-w-fit rounded-3xl bg-customBlue px-4">Contact Me</h1>
+    <div className="flex min-h-max w-full items-center justify-center">
+      <div className="flex w-1/2 flex-col items-center gap-20 rounded-3xl bg-customYellow py-4">
         {!submit ? (
           <div className="w-1/2">
             <form className="flex w-full flex-col justify-center gap-2">
