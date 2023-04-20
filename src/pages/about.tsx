@@ -35,24 +35,20 @@ function about() {
         </div>
         <div className="flex flex-col px-2 text-white md:w-1/2">
           <p>
-            Hello! My name is Samuel, I love to build software products. I
-            graduated from UC Santa Barbara in 2018 with a B.A. in Economics,
-            and in my previous experience I worked in corporate lending and
-            FP&A. Having worked in roles working with data and also having a
-            passion for the arts, I find that I draw many diciplines.
+            Hello! My name is Samuel, I enjoy solving business problems and
+            building software. I graduated from UC Santa Barbara in 2018 with a
+            B.A. in Economics, and in my previous experiences I worked in
+            corporate lending and FP&A. Having worked in roles working with data
+            and also having a passion for the arts, I find that I draw from many
+            diciplines.
             <br></br>
             <br></br>
             In June 2022, I decided to make the leap into the world of software
-            and began learning the basics of development which led me to study
-            software engineering at{' '}
-            <a
-              href="https://www.hackreactor.com/"
-              target="_blank"
-              className="hover:border-customYtext-customYellow border-b-2 border-transparent text-customYellow transition duration-300"
-            >
-              Hack Reactor
-            </a>
-            . If you would like to check out some of my projects check out my{' '}
+            after my interest in building commerce tools and began learning the
+            basics of development which led me to study software engineering at
+            Hack Reactor. On my free time, I dabble in a bit of music
+            production, audio engineering and most recently 3d modeling. If you
+            would like to check out some of my projects check out my{' '}
             <a
               href="https://github.com/samuelho-dev"
               target="_blank"
@@ -70,8 +66,6 @@ function about() {
             </Link>{' '}
             for my resume or you can reach me at{' '}
             <ins>samuelho343@gmail.com</ins>.<br></br>
-            On my free time, I dabble in a bit of music production, audio
-            engineering and most recently 3d modeling.
           </p>
           <p>Some technologies I have been working with:</p>
           <ul className="inline-grid grid-cols-3 gap-2 py-2">
