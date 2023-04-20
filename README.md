@@ -1,6 +1,6 @@
 ## Welcome to my portfolio site!
 
-![frontpage](https://user-images.githubusercontent.com/78818117/227389202-56990a57-d318-4d77-a715-a2029cbe81bf.png)
+![frontpage](https://user-images.githubusercontent.com/78818117/233452195-12ee1b12-9655-4513-905a-4cda3e627ada.PNG)
 
 
 ## Installation & Setup
