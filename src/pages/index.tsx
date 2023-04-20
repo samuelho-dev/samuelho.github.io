@@ -19,8 +19,8 @@ function Home({ handleRoute }: HomeProps) {
   };
   return (
     <section className="flex w-full justify-center">
-      <div className="flex h-full w-3/4 flex-col place-items-center gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-2 lg:grid lg:max-w-7xl lg:grid-flow-row-dense">
-        <div className="col-span-1 row-span-1 flex flex-col justify-center  align-middle">
+      <div className="flex h-full w-3/4 flex-col place-items-center gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-2 lg:grid lg:max-w-4xl lg:grid-flow-row-dense">
+        <div className="col-span-1 row-span-1 flex flex-col justify-center align-middle">
           <div>
             <h3 className="text-white">Welcome!</h3>
             <h1 className="text-white">Take a look around</h1>
@@ -28,43 +28,41 @@ function Home({ handleRoute }: HomeProps) {
           <SomethingWeird />
         </div>
         <div
-          className="col-span-1 row-span-1 my-0 flex h-full w-full cursor-pointer flex-col items-center justify-center bg-customOrange py-2 lg:my-12 lg:h-3/4 lg:w-3/4"
+          className="tileShadow col-span-1 row-span-1 flex h-60 w-52 cursor-pointer flex-col items-center justify-center rounded-lg bg-customGreen py-2"
           onClick={() => handleRoute('work')}
         >
           <h5>Work</h5>
-          <div className="relative h-40 w-full lg:h-full">
+          <div className="relative h-full w-full">
             <Image
-              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679542756/Portfolio/color_lenoau.jpg"
+              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1681968224/Portfolio/c07062acb1a1053977bd61a5be4e3943_r8e5lu.jpg"
               alt="work jpg"
               fill
-              className="object-contain"
+              className="object-contain opacity-80"
               loading="lazy"
             />
           </div>
         </div>
-        <div className=" col-span-1 row-span-1 flex h-full w-full flex-col items-center bg-customLightPink">
+        <div className="tileShadow col-span-1 row-span-1 flex h-full w-full flex-col items-center rounded-lg bg-customLightPink">
           <h5>Game</h5>
           <Game handleGameModal={handleGameModal} gameModal={gameModal} />
         </div>
         <div
-          className="col-span-1 row-span-1 flex h-60 w-full cursor-pointer flex-col items-center justify-center bg-customBlue px-10 py-5 lg:h-full lg:w-3/4"
+          className="tileShadow col-span-1 row-span-1 flex h-60 w-5/6 cursor-pointer flex-col items-center justify-center rounded-lg bg-customBlue py-2"
           onClick={() => handleRoute('about')}
         >
           <h5>About Me</h5>
-          <div className="relative h-full w-full">
+          <div className="relative h-full w-full rounded-lg">
             <Image
               src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679543020/Portfolio/frame_foxlih.jpg"
               fill
               alt="project jpg"
-              className="object-contain"
+              className="object-contain opacity-90"
               loading="lazy"
             />
           </div>
         </div>
-        <div className="col-span-2 row-span-2 my-2 h-full w-full items-center justify-center bg-customYellow px-4">
-          <h2>Make A Beat!</h2>
-          <StepSequencer />
-        </div>
+
+        <StepSequencer />
 
         {gameModal && (
           <Canvas handleGameModal={handleGameModal} gameModal={gameModal} />

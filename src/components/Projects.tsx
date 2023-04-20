@@ -61,7 +61,7 @@ function Projects() {
                 i % 2 !== 0 && 'md:ml-[-10%]'
               }`}
             >
-              <div className="mix-blend-darken grayscale filter hover:filter-none">
+              <div className="tileShadow mix-blend-darken grayscale filter hover:filter-none">
                 <Image
                   src={project.image}
                   alt={project.name}
@@ -92,12 +92,12 @@ function Projects() {
                   </h1>
                 </a>
                 <a href={project.source} target="_blank">
-                  <BsGithub />
+                  <BsGithub className="fill-zinc-200" />
                 </a>
               </div>
 
               <p
-                className={`flex text-slate-700 ${
+                className={`flex text-zinc-300 ${
                   i % 2 === 0 && 'justify-end '
                 }`}
               >
@@ -137,7 +137,7 @@ function Projects() {
               target="_blank"
               className="flex w-full"
             >
-              <div className="m-2 flex cursor-pointer flex-col justify-between bg-customOrange bg-opacity-70 p-2">
+              <div className="tileShadow m-2 flex cursor-pointer flex-col justify-between bg-customOrange bg-opacity-70 p-2">
                 <div className="flex items-center gap-2">
                   <div>{iconmap.Plus}</div>
                   <h5 className="w-fit border-b-2 border-transparent  transition duration-300 hover:border-customRed">

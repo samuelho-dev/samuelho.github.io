@@ -10,8 +10,8 @@ interface LayoutProps {
 export default function Layout({ children, handleRoute }: LayoutProps) {
   return (
     <>
-      <header className="flex w-full justify-between">
-        <h1 onClick={() => handleRoute('')} className="cursor-pointer">
+      <header className="flex w-full justify-between p-2">
+        <h1 onClick={() => handleRoute('')} className="cursor-pointer text-3xl">
           Samuel Ho
         </h1>
 

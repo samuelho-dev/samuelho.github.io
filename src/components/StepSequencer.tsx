@@ -83,51 +83,47 @@ function StepSequencer() {
   };
 
   return (
-    <div className="flex w-full flex-col place-items-center">
-      <div>
-        <div className="flex w-full justify-end gap-4">
-          <div className="flex gap-2">
-            <label>Tempo :</label>
-            <input
-              type="number"
-              className="w-12"
-              value={tempo}
-              onChange={handleBpmChange}
-            />
-          </div>
-          <button onClick={handlePlay} className="bg-customRed px-2">
+    <div className="tileShadow col-span-2 row-span-2 h-full w-full items-center justify-center rounded-lg bg-customYellow px-4">
+      <div className="flex w-full items-center justify-between py-2">
+        <h2 className="text-black">Make A Beat!</h2>
+        <div className="flex gap-2">
+          <label>Tempo :</label>
+          <input
+            type="number"
+            className="w-12"
+            value={tempo}
+            onChange={handleBpmChange}
+          />
+          <button onClick={handlePlay} className="rounded-lg bg-customRed px-2">
             {!play ? 'Play' : 'Pause'}
           </button>
         </div>
-        <div className="flex gap-4 md:gap-8">
-          <div className="flex flex-col justify-evenly gap-1 rounded-lg bg-customRed px-0 md:px-2">
-            {['Hat', 'Snare', 'Kick', 'Bongo'].map((drum, i) => (
-              <h5
-                key={i}
-                className="rounded-md bg-customBlue px-0 text-center md:px-2"
-              >
-                {drum}
-              </h5>
-            ))}
-          </div>
-          <div>
-            {grid.map((col, rowIdx) => (
-              <div key={rowIdx} className="flex gap-2 py-2 md:gap-4">
-                {col.map((note, noteIdx) => (
-                  <button
-                    disabled={!loaded}
-                    className={`h-4 w-4 md:h-8 md:w-8 ${
-                      note.isActive
-                        ? 'rounded-lg bg-customBlue'
-                        : 'rounded-md bg-customWhite'
-                    }`}
-                    onClick={() => handleNoteClick(rowIdx, noteIdx)}
-                    key={`note-${rowIdx}-${noteIdx}`}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
+      </div>
+      <div className="flex justify-center gap-2 md:gap-4">
+        <div className="buttonShadow my-2 flex flex-col justify-evenly gap-2 rounded-lg bg-customRed p-2">
+          {['Hat', 'Snare', 'Kick', 'Bongo'].map((drum, i) => (
+            <h5 key={i} className="rounded-md bg-customBlue px-1 text-center">
+              {drum}
+            </h5>
+          ))}
+        </div>
+        <div className="flex flex-col justify-center ">
+          {grid.map((col, rowIdx) => (
+            <div key={rowIdx} className="flex gap-2 py-2 md:gap-4">
+              {col.map((note, noteIdx) => (
+                <button
+                  disabled={!loaded}
+                  className={`buttonShadow h-4 w-4 md:h-8 md:w-8 ${
+                    note.isActive
+                      ? 'rounded-lg bg-customBlue'
+                      : 'rounded-md bg-customWhite'
+                  }`}
+                  onClick={() => handleNoteClick(rowIdx, noteIdx)}
+                  key={`note-${rowIdx}-${noteIdx}`}
+                />
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ function Navbar({ handleRoute }: NavbarProps) {
         About
       </h2>
       <div
-        className=" flex rounded-full bg-customBlue py-1 px-2"
+        className=" flex rounded-full bg-customBlue  px-4 hover:bg-opacity-70"
         onClick={() => handleRoute('contact')}
       >
         <h2 className="cursor-pointer">Contact</h2>

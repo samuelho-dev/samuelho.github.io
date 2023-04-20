@@ -50,9 +50,9 @@ function Contact() {
   };
   return (
     <div className="flex min-h-max w-full items-center justify-center">
-      <div className="flex w-1/2 flex-col items-center gap-20 rounded-3xl bg-customYellow py-4">
+      <div className="tileShadow flex w-full flex-col items-center gap-20 rounded-3xl bg-customYellow py-4 md:w-1/2">
         {!submit ? (
-          <div className="w-1/2">
+          <div className="w-5/6">
             <form className="flex w-full flex-col justify-center gap-2">
               <label htmlFor="name" className="mt-8 font-light text-black">
                 Full name

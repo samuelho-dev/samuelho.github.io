@@ -23,29 +23,36 @@ function WorkHistory() {
   return (
     <section className="flex h-1/2 max-w-5xl flex-col justify-center gap-4 py-0 md:py-16">
       <h2 className="text-slate-200">Work History</h2>
-      <div className=" flex flex-col rounded-xl bg-customWhite md:flex-row">
+      <div className="tileShadow flex flex-col rounded-xl bg-customWhite outline outline-1 md:flex-row">
         <div
           ref={containerRef}
           className="flex w-full flex-col gap-6 rounded-xl bg-customOrange p-4 md:w-1/2 md:p-6"
         >
           <div className="flex items-center justify-between">
-            <h1>Previously..</h1>
+            <h2>Previously..</h2>
             <Link
               href={'/Resume_SamuelHo.pdf'}
               download
               className="cursor-pointer"
             >
-              <RiFileDownloadLine className="h-8 w-6" color="white" />
+              <RiFileDownloadLine
+                className="h-8 w-6 hover:fill-zinc-800"
+                color="white"
+              />
             </Link>
           </div>
-          <div className="flex flex-row gap-4 md:flex-col">
+          <div className="flex flex-col gap-4">
             {experience.map((entry, i) => (
               <h2
                 key={i}
                 onClick={(e) => {
                   handleDetails(e, entry);
                 }}
-                className="flex cursor-pointer justify-between rounded-xl bg-customOrange p-2 outline-dotted hover:outline-double md:p-6"
+                className={`tileShadow flex cursor-pointer justify-between rounded-xl  p-2 outline-dotted hover:outline-double md:p-6 ${
+                  detail.employer === entry.employer
+                    ? 'bg-customGreen outline-double'
+                    : 'bg-orange-400 bg-opacity-50'
+                }`}
               >
                 {entry.employer}
               </h2>
@@ -53,10 +60,10 @@ function WorkHistory() {
           </div>
         </div>
         <div ref={detailRef} className="w-full p-6 md:w-1/2">
-          <div className="flex flex-col items-start justify-between md:flex-row">
-            <div className="flex flex-wrap gap-1 ">
-              <h3 className="text-black">{detail.title}</h3>
-              <div className="flex cursor-pointer gap-1 ">
+          <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
+            <div className="flex flex-wrap items-center gap-1">
+              <h2 className="text-black">{detail.title}</h2>
+              <div className="flex cursor-pointer items-center gap-1">
                 <h3 className="text-customBlue">@</h3>
                 <a href={detail.employer_url} target="_blank">
                   <h3 className="border-b-2 border-transparent text-customBlue transition duration-300 hover:border-customBlue">
@@ -67,10 +74,12 @@ function WorkHistory() {
             </div>
             <div className="flex w-full items-center justify-between md:w-fit md:flex-col  ">
               <p>{detail.location}</p>
-              <sub className="tracking-wide">{detail.dates}</sub>
+              <p className="whitespace-nowrap py-2 text-xs tracking-wide">
+                {detail.dates}
+              </p>
             </div>
           </div>
-          <div className="flex flex-col gap-2 pt-2">
+          <div className="flex  flex-col items-center justify-center gap-4 pt-2">
             {detail.responsibilities.map((el, i) => (
               <p key={i} className="flex items-start">
                 <span className="h-4 w-4 py-2 text-slate-700">

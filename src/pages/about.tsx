@@ -33,13 +33,14 @@ function about() {
             />
           </div>
         </div>
-        <div className="flex flex-col px-2 md:w-1/2">
+        <div className="flex flex-col px-2 text-white md:w-1/2">
           <p>
-            Hello! My name is Samuel, a versatile professional with a strong
-            foundation in both Economics and software engineering. I graduated
-            from UC Santa Barbara in 2018 with a B.A. in Economics, and have
-            experience in corporate lending and FP&A. I find that my passion
-            lies in crafting solutions through data and design.
+            Hello! My name is Samuel, I love to build software products. I
+            graduated from UC Santa Barbara in 2018 with a B.A. in Economics,
+            and in my previous experience I worked in corporate lending and
+            FP&A. Having worked in roles working with data and also having a
+            passion for the arts, I find that I draw many diciplines.
+            <br></br>
             <br></br>
             In June 2022, I decided to make the leap into the world of software
             and began learning the basics of development which led me to study
@@ -47,7 +48,7 @@ function about() {
             <a
               href="https://www.hackreactor.com/"
               target="_blank"
-              className="border-b-2 border-transparent text-customBlue transition duration-300 hover:border-customBlue"
+              className="hover:border-customYtext-customYellow border-b-2 border-transparent text-customYellow transition duration-300"
             >
               Hack Reactor
             </a>
@@ -55,22 +56,22 @@ function about() {
             <a
               href="https://github.com/samuelho-dev"
               target="_blank"
-              className="border-b-2 border-transparent text-customBlue transition duration-300 hover:border-customBlue"
+              className="hover:border-customYtext-customYellow border-b-2 border-transparent text-customYellow transition duration-300"
             >
               github
             </a>
             , and if you are a recruiter click{' '}
             <Link
               href={'/Resume_SamuelHo.pdf'}
-              className="border-b-2 border-transparent text-customBlue transition duration-300 hover:border-customBlue"
+              className="hover:border-customYtext-customYellow border-b-2 border-transparent text-customYellow transition duration-300"
               download={'/Resume_SamuelHo.pdf'}
             >
               here
             </Link>{' '}
             for my resume or you can reach me at{' '}
             <ins>samuelho343@gmail.com</ins>.<br></br>
-            On the side I enjoy making music and recently have been enjoying
-            getting into 3D art.
+            On my free time, I dabble in a bit of music production, audio
+            engineering and most recently 3d modeling.
           </p>
           <p>Some technologies I have been working with:</p>
           <ul className="inline-grid grid-cols-3 gap-2 py-2">
