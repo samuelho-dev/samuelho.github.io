@@ -13,7 +13,7 @@ First, install the necessary dependencies and run the development server:
 npm install
 ```
 
-2. Build and run the developement server
+2. Build and run the development server
 
 ```
 npm run build
