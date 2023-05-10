@@ -85,10 +85,22 @@
   ],
   "otherProjects": [
     {
-      "name": "Market Analysis API with GPT (currently experimenting)",
-      "description": "An API built with Flask, and utilizing GPT API and news articles about top players in each industry to gain insights on market sentiment.",
-      "technologies": ["Flask", "Python", "Open AI"],
-      "source": "https://github.com/samuelho-dev/marketanalyticsapi"
+      "name": "Audiospace - In Development",
+      "description": "An audio plugin and sample kit marketplace and community. Multivendor, Custom blog CMS, Beat Battles, Paypal Integration, built with Typescript & Nextjs",
+      "technologies": [
+        "Typescript",
+        "NextJS",
+        "Tailwind",
+        "MDX",
+        "TRPC",
+        "Prisma",
+        "NextAuth",
+        "Backblaze",
+        "MySQL",
+        "AWS",
+        "Paypal"
+      ],
+      "source": "https://github.com/samuelho-dev/audiospace"
     },
     {
       "name": "Fashion Ecommerce Site",

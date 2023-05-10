@@ -1,14 +1,17 @@
 import React from 'react';
 import data from '../../util/resume.json';
-import { TbBrandNextjs } from 'react-icons/tb';
+import { TbBrandNextjs, TbBrandTailwind } from 'react-icons/tb';
 import { FaNodeJs, FaReact } from 'react-icons/fa';
 import { FaAws } from 'react-icons/fa';
 import {
+  SiBackblaze,
   SiFirebase,
   SiFlask,
+  SiMysql,
   SiOpenai,
   SiPython,
   SiReact,
+  SiTrpc,
   SiTypescript,
 } from 'react-icons/si';
 import { SiPrisma } from 'react-icons/si';
@@ -16,8 +19,9 @@ import { SiPostgresql } from 'react-icons/si';
 import { SiReactquery } from 'react-icons/si';
 import { SiJavascript } from 'react-icons/si';
 import { SiSequelize } from 'react-icons/si';
-import { BsGithub } from 'react-icons/bs';
+import { BsFiletypeMdx, BsGithub } from 'react-icons/bs';
 import { HiOutlinePlusCircle } from 'react-icons/hi';
+import { SlPaypal } from 'react-icons/sl';
 import Image from 'next/image';
 
 interface IconMap {
@@ -44,6 +48,12 @@ function Projects() {
     AWS: <FaAws color="white" />,
     Node: <FaNodeJs color="white" />,
     NextJS: <TbBrandNextjs color="white" />,
+    Tailwind: <TbBrandTailwind color="white" />,
+    MDX: <BsFiletypeMdx color="white" />,
+    TRPC: <SiTrpc color="white" />,
+    Backblaze: <SiBackblaze color="white" />,
+    MySQL: <SiMysql color="white" />,
+    Paypal: <SlPaypal color="white" />,
   };
   return (
     <section className="max-w-6xl">
@@ -129,7 +139,7 @@ function Projects() {
       </ul>
       <div className="flex flex-col gap-2 pt-12">
         <h5>Other Projects</h5>
-        <div className="flex flex-col md:flex-row">
+        <div className="w-full">
           {otherProjects.map((project, i) => (
             <a
               key={i}
@@ -137,7 +147,7 @@ function Projects() {
               target="_blank"
               className="flex w-full"
             >
-              <div className="tileShadow m-2 flex cursor-pointer flex-col justify-between bg-customOrange bg-opacity-70 p-2">
+              <div className="tileShadow m-2 flex w-full cursor-pointer flex-col justify-between bg-customOrange bg-opacity-70 p-2">
                 <div className="flex items-center gap-2">
                   <div>{iconmap.Plus}</div>
                   <h5 className="w-fit border-b-2 border-transparent  transition duration-300 hover:border-customRed">
@@ -145,7 +155,7 @@ function Projects() {
                   </h5>
                 </div>
                 <p>{project.description}</p>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                   {project.technologies.map((tech, j) => (
                     <div key={j} className={`flex items-center gap-2 pt-4`}>
                       <div>{iconmap[tech]}</div>
