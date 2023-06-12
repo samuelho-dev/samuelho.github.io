@@ -35,14 +35,15 @@ function about() {
         </div>
         <div className="flex flex-col px-2 tracking-wide text-white md:w-1/2">
           <p>
-            Hey! My name is Samuel and I am a software engineer, previously
-            working in finance and also a music head. I graduated from UC Santa
-            Barbara in 2018 with a B.A. in Economics, and my previous roles were
-            in corporate lending and FP&A. Having worked in cross functional and
-            quantitative roles and also having a passion for the arts, I find
-            that I draw from many diciplines. On my free time, I dabble in a bit
-            of music production, audio engineering and most recently 3d
-            modeling.
+            Hey! My name is Samuel and I am a software developer passionate
+            about making products and solving business problems. I graduated
+            from UC Santa Barbara in 2018 with a B.A. in Economics, and my
+            previous roles were in corporate lending and FP&A. Having worked in
+            cross functional and quantitative roles and also having a passion
+            for the arts, I find that I draw from many diciplines. On my free
+            time, I dabble music production, audio engineering and most recently
+            3d modeling. I also host a regular meetup group every weekend for
+            music producers in LA.
             <br></br>
             <br></br>
             If you would like to check out some of my projects check out my{' '}
