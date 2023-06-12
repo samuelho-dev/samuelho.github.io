@@ -75,18 +75,24 @@
       "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1679541608/Portfolio/albumguessr_fsff5n.png"
     },
     {
-      "name": "SunChip",
-      "role": "Engineer",
-      "description": "Designed and implemented a secure backend and database for a fashion ecommerce store hosted using AWS EC2. Implemented caching via NGNIX and horizontal scaling via AWS.",
-      "technologies": ["Javascript", "Node", "PostgreSQL", "Sequelize", "AWS"],
-      "source": "https://github.com/sunChips-mysteryFlavor",
-      "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1679541608/Portfolio/SunChip_nh1pxx.png"
+      "name": "DiscordSMS",
+      "description": "Manage your marketing and event list with SMS and Discord.",
+      "technologies": [
+        "Node",
+        "Typescript",
+        "DiscordJs",
+        "PostgreSQL",
+        "KnexJs",
+        "Twilio"
+      ],
+      "source": "https://github.com/samuelho-dev/discordSMS",
+      "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1686601782/Portfolio/how-to-make-a-discord-bot-7c0fe302b98b05b145682344b3a4ec59_dvq73r.png"
     }
   ],
   "otherProjects": [
     {
       "name": "Audiospace - In Development",
-      "description": "An audio plugin and sample kit marketplace and community. Multivendor, Custom blog CMS, Beat Battles, Paypal Integration, built with Typescript & Nextjs",
+      "description": "An audio plugin and sample kit marketplace and community. Multivendor, Custom blog CMS, Beat Battles, Stripe Integration, built with Typescript & Nextjs",
       "technologies": [
         "Typescript",
         "NextJS",
@@ -98,15 +104,23 @@
         "Backblaze",
         "MySQL",
         "AWS",
-        "Paypal"
+        "Stripe",
+        "Twilio"
       ],
       "source": "https://github.com/samuelho-dev/audiospace"
     },
     {
+      "name": "SunChip",
+      "role": "Engineer",
+      "description": "Designed and implemented a secure backend and database for a fashion ecommerce store hosted using AWS EC2. Implemented caching via NGNIX and horizontal scaling via AWS.",
+      "technologies": ["Javascript", "Node", "PostgreSQL", "Sequelize", "AWS"]
+    },
+
+    {
       "name": "Fashion Ecommerce Site",
       "description": "Functional ecommerce front-end with extensive product selections and articles.",
       "technologies": ["React"],
-      "source": "https://samuelho-fashion-ecommerce.vercel.app/"
+      "source": "https://github.com/samuelho-dev/Fashion-Ecommerce-Site"
     }
   ]
 }

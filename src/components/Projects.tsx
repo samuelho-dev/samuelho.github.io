@@ -14,6 +14,8 @@ import {
   SiTrpc,
   SiTypescript,
 } from 'react-icons/si';
+import { TbBrandTwilio } from 'react-icons/tb';
+import { RxDiscordLogo } from 'react-icons/rx';
 import { SiPrisma } from 'react-icons/si';
 import { SiPostgresql } from 'react-icons/si';
 import { SiReactquery } from 'react-icons/si';
@@ -54,6 +56,8 @@ function Projects() {
     Backblaze: <SiBackblaze color="white" />,
     MySQL: <SiMysql color="white" />,
     Paypal: <SlPaypal color="white" />,
+    Twilio: <TbBrandTwilio color="white" />,
+    DiscordJs: <RxDiscordLogo color="white" />,
   };
   return (
     <section className="max-w-6xl">
