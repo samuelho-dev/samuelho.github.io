@@ -85,7 +85,7 @@ function StepSequencer() {
       <div className="flex w-full items-center justify-between py-2">
         <h2 className="text-black">Make A Beat!</h2>
         <div className="flex gap-2">
-          <label>Tempo :</label>
+          <label className="whitespace-nowrap">Tempo :</label>
           <input
             type="number"
             className="w-12"
