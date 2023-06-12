@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import data from '../../util/resume.json';
 import { RiFileDownloadLine } from 'react-icons/ri';
 import { TbArrowBadgeRight } from 'react-icons/tb';
-import { gsap } from 'gsap';
 import Link from 'next/link';
 import { Experience } from '../../types/types';
 function WorkHistory() {

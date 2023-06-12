@@ -5,7 +5,6 @@ import { TbBrandMongodb } from 'react-icons/tb';
 import { IoLogoNodejs } from 'react-icons/io';
 import { FaAws } from 'react-icons/fa';
 import {
-  SiJavascript,
   SiTypescript,
   SiPostgresql,
   SiNextdotjs,
@@ -16,7 +15,6 @@ import {
   SiPython,
   SiFlask,
 } from 'react-icons/si';
-import { gsap } from 'gsap';
 
 function about() {
   return (

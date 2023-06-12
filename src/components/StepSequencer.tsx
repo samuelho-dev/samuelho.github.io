@@ -1,12 +1,10 @@
-import React, { MouseEventHandler, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as Tone from 'tone';
 import { Sampler, Transport } from 'tone';
 import hiHat from 'public/sounds/NAMI_Hi-Hat_Armani.wav';
 import Snare from 'public/sounds/RL_-_Razor_Snare.wav';
 import Kick from 'public/sounds/Slappy_Kick_35.wav';
 import Bongo from 'public/sounds/SD3_BONGO33.wav';
-
-import { gsap } from 'gsap';
 
 const notes = [hiHat, Snare, Kick, Bongo];
 
