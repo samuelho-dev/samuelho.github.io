@@ -1,7 +1,4 @@
-import Game from '@/components/Game';
 import SomethingWeird from '@/components/SomethingWeird';
-import Canvas from '@/game/Canvas';
-
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Routes from '../../types/types';
