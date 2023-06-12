@@ -40,13 +40,15 @@ function Home({ handleRoute }: HomeProps) {
           </div>
         </div>
         <div className="tileShadow col-span-1 row-span-1 flex h-full w-full rounded-lg bg-customLightPink p-4">
-          <Image
-            src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1686602915/Portfolio/ezgif.com-optimize_3_buzomn.gif"
-            alt="fill jpg"
-            fill
-            className="object-scale-down opacity-80 hover:opacity-100"
-            loading="lazy"
-          />
+          <div className="relative h-full w-full">
+            <Image
+              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1686602915/Portfolio/ezgif.com-optimize_3_buzomn.gif"
+              alt="fill jpg"
+              fill
+              className="flex object-scale-down opacity-80 hover:opacity-100"
+              loading="lazy"
+            />
+          </div>
         </div>
         <div
           className="tileShadow col-span-1 row-span-1 flex h-60 w-5/6 cursor-pointer flex-col items-center justify-center rounded-lg bg-customBlue py-2"
