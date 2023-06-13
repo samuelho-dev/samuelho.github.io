@@ -34,13 +34,13 @@ function SomethingWeird() {
       <div className="relative h-10 w-6 rounded-full bg-white">
         <div
           ref={eyesRef}
-          className="relative h-4 w-4 rounded-full bg-black"
+          className="relative h-4 w-4 rounded-full bg-black outline outline-1 outline-zinc-300"
           style={handleEyesMove()}
         />
       </div>
       <div className=" h-10 w-6 rounded-full bg-white">
         <div
-          className="relative h-4 w-4 rounded-full bg-black"
+          className="relative h-4 w-4 rounded-full bg-black outline outline-1 outline-zinc-300"
           style={handleEyesMove()}
         />
       </div>

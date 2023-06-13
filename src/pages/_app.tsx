@@ -14,8 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Samuel Ho</title>
-        <meta name="description" content="Samuel Ho" />
+        <title>SAMUEL HO</title>
+        <meta name="description" content="SAMUEL HO" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
