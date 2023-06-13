@@ -19,16 +19,18 @@ function Home({ handleRoute }: HomeProps) {
       <div className="flex h-full w-3/4 flex-col place-items-center gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-2 lg:grid lg:max-w-4xl lg:grid-flow-row-dense">
         <div className="col-span-1 row-span-1 flex flex-col justify-center align-middle">
           <div>
-            <h3 className="text-white">Welcome!</h3>
+            <h3 className="text-white">WELCOME!</h3>
             <h1 className="text-white">Take a look around</h1>
           </div>
           <SomethingWeird />
         </div>
         <div
-          className="tileShadow col-span-1 row-span-1 flex h-60 w-52 cursor-pointer flex-col items-center justify-center rounded-lg bg-customGreen py-2"
+          className="tileShadow col-span-1 row-span-1 flex h-60 w-52 cursor-pointer flex-col items-center justify-center rounded-lg bg-customGreen p-2"
           onClick={() => handleRoute('work')}
         >
-          <h5>Work</h5>
+          <h5 className="absolute z-50 -translate-y-10 text-4xl font-bold tracking-wider">
+            WORK
+          </h5>
           <div className="relative h-full w-full">
             <Image
               src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1681968224/Portfolio/c07062acb1a1053977bd61a5be4e3943_r8e5lu.jpg"
@@ -51,10 +53,12 @@ function Home({ handleRoute }: HomeProps) {
           </div>
         </div>
         <div
-          className="tileShadow col-span-1 row-span-1 flex h-60 w-5/6 cursor-pointer flex-col items-center justify-center rounded-lg bg-customBlue py-2"
+          className="tileShadow col-span-1 row-span-1 flex h-60 w-60 cursor-pointer flex-col items-center justify-center rounded-lg bg-customBlue p-2"
           onClick={() => handleRoute('about')}
         >
-          <h5>About Me</h5>
+          <h5 className="absolute z-50 text-4xl font-bold tracking-wider text-black">
+            ABOUT ME
+          </h5>
           <div className="relative h-full w-full rounded-lg">
             <Image
               src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679543020/Portfolio/frame_foxlih.jpg"

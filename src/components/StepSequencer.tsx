@@ -81,24 +81,28 @@ function StepSequencer() {
   };
 
   return (
-    <div className="tileShadow col-span-2 row-span-2 h-full w-full items-center justify-center rounded-lg bg-customYellow px-4">
-      <div className="flex w-full items-center justify-between py-2">
-        <h2 className="text-black">Make A Beat!</h2>
-        <div className="flex gap-2">
-          <label className="whitespace-nowrap">Tempo :</label>
-          <input
-            type="number"
-            className="w-12"
-            value={tempo}
-            onChange={handleBpmChange}
-          />
-          <button onClick={handlePlay} className="rounded-lg bg-customRed px-2">
+    <div className="tileShadow col-span-2 row-span-2 h-full w-full items-center justify-between rounded-lg bg-customYellow">
+      <div className="flex w-full items-center justify-between p-4">
+        <h2 className="text-2xl font-extralight tracking-tight text-black">
+          MAKE A BEAT!
+        </h2>
+        <div className="flex flex-col gap-2 md:flex-row">
+          <div className="flex gap-2">
+            <label className="whitespace-nowrap">Tempo :</label>
+            <input
+              type="number"
+              className="w-12"
+              value={tempo}
+              onChange={handleBpmChange}
+            />
+          </div>
+          <button onClick={handlePlay} className="rounded-lg bg-customRed px-1">
             {!play ? 'Play' : 'Pause'}
           </button>
         </div>
       </div>
-      <div className="flex justify-center gap-2 md:gap-4">
-        <div className="buttonShadow my-2 flex flex-col justify-evenly gap-2 rounded-lg bg-customRed p-2">
+      <div className="my-1 flex justify-center gap-2 md:gap-4">
+        <div className="buttonShadow flex flex-col justify-evenly gap-2 rounded-lg bg-customRed p-2">
           {['Hat', 'Snare', 'Kick', 'Bongo'].map((drum, i) => (
             <h5 key={i} className="rounded-md bg-customBlue px-1 text-center">
               {drum}
