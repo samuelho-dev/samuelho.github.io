@@ -39,7 +39,7 @@ function Home({ handleRoute }: HomeProps) {
             />
           </div>
         </div>
-        <div className="tileShadow col-span-1 row-span-1 flex h-60 w-full rounded-lg bg-customLightPink p-2">
+        <div className="tileShadow col-span-1 row-span-1 flex h-60 w-60 rounded-lg bg-customLightPink p-2">
           <div className="relative w-full">
             <Image
               src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1686602915/Portfolio/ezgif.com-optimize_3_buzomn.gif"
