@@ -13,7 +13,7 @@ import {
   SiAdobe,
   SiReact,
   SiPython,
-  SiFlask,
+  SiFastapi,
 } from 'react-icons/si';
 
 function about() {
@@ -105,8 +105,8 @@ function about() {
               <sub>Python</sub>
             </li>
             <li className="flex items-center gap-2">
-              <SiFlask />
-              <sub>Flask</sub>
+              <SiFastapi />
+              <sub>Fast Api</sub>
             </li>
             <li className="flex items-center gap-2">
               <SiAbletonlive />

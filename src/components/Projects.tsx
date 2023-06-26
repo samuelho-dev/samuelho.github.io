@@ -6,7 +6,7 @@ import { FaAws } from 'react-icons/fa';
 import {
   SiBackblaze,
   SiFirebase,
-  SiFlask,
+  SiFastapi,
   SiMysql,
   SiOpenai,
   SiPython,
@@ -43,7 +43,7 @@ function Projects() {
     Javascript: <SiJavascript color="white" />,
     Sequelize: <SiSequelize color="white" />,
     'Open AI': <SiOpenai color="white" />,
-    Flask: <SiFlask color="white" />,
+    'Fast API': <SiFastapi color="white" />,
     Python: <SiPython color="white" />,
     React: <SiReact color="white" />,
     Plus: <HiOutlinePlusCircle color="white" />,
