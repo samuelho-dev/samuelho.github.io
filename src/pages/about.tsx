@@ -106,7 +106,7 @@ function about() {
             </li>
             <li className="flex items-center gap-2">
               <SiFastapi />
-              <sub>Fast Api</sub>
+              <sub>Fast API</sub>
             </li>
             <li className="flex items-center gap-2">
               <SiAbletonlive />
