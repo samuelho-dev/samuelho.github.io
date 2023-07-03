@@ -30,7 +30,7 @@ function WorkHistory() {
           <div className="flex items-center justify-between">
             <h2>Previously..</h2>
             <Link
-              href={'/Resume_SamuelHo.pdf'}
+              href={'/Resume_SamuelHo.docx'}
               download
               className="cursor-pointer"
             >

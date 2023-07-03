@@ -54,9 +54,9 @@ function about() {
             </a>
             , and if you are a recruiter click{' '}
             <Link
-              href={'/Resume_SamuelHo.pdf'}
+              href={'/Resume_SamuelHo.docx'}
               className="hover:border-customYtext-customYellow border-b-2 border-transparent text-customYellow transition duration-300"
-              download={'/Resume_SamuelHo.pdf'}
+              download={'/Resume_SamuelHo.docx'}
             >
               here
             </Link>{' '}
