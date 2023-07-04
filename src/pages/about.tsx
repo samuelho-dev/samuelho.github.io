@@ -40,8 +40,7 @@ function about() {
             worked in cross functional and quantitative roles and also having a
             passion for the arts, I find that I draw from many diciplines. On my
             free time, I dabble music production, audio engineering and most
-            recently 3d modeling. I also host a regular meetup group every
-            weekend for music producers in LA.
+            recently 3d modeling.
             <br></br>
             <br></br>
             If you would like to check out some of my projects check out my{' '}
