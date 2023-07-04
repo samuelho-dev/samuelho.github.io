@@ -1,6 +1,7 @@
 ## Welcome to my portfolio site!
 
-![frontpage](https://user-images.githubusercontent.com/78818117/233452195-12ee1b12-9655-4513-905a-4cda3e627ada.PNG)
+![frontpage](https://github.com/samuelho-dev/portfolio/assets/78818117/f26ae02b-559c-48e7-a1b3-530a9aadd570)
+
 
 
 ## Installation & Setup
