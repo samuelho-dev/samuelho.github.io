@@ -56,7 +56,7 @@
       "role": "PM/Engineer",
       "description": "A mobile ecommerce app for trading card enthusiasts. Users can interact with each other via our real-time messaging platform and trade/purchase cards.",
       "technologies": ["React Native", "Firebase"],
-      "source": "https://usdata.vercel.app",
+      "source": "https://github.com/stunningstunfisk/swapesy",
       "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1679541608/Portfolio/Swapesy_lkmxdj.png"
     },
     {
@@ -64,7 +64,7 @@
       "role": "Engineer",
       "description": "Data Visualization app based on US Census & Fred Economic Data. Broad overview of diversity, population, housing, and economic conditions utilizing publicly accessible APIs.",
       "technologies": ["Typescript", "NextJS", "Nivo", "MySQL"],
-      "source": "https://github.com/stunningstunfisk/swapesy",
+      "source": "https://usdata.vercel.app",
       "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1679541608/Portfolio/USData_yxpbio.png"
     },
     {
