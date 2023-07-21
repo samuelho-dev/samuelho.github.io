@@ -33,21 +33,10 @@ function Home({ handleRoute }: HomeProps) {
           </h5>
           <div className="relative h-full w-full">
             <Image
-              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1681968224/Portfolio/c07062acb1a1053977bd61a5be4e3943_r8e5lu.jpg"
+              src="/images/work.jpg"
               alt="work jpg"
               fill
               className="object-contain opacity-80"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <div className="tileShadow col-span-1 row-span-1 flex h-60 w-60 rounded-lg bg-customLightPink p-2">
-          <div className="relative w-full">
-            <Image
-              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1686602915/Portfolio/ezgif.com-optimize_3_buzomn.gif"
-              alt="fill jpg"
-              fill
-              className="flex object-scale-down opacity-80 hover:opacity-100"
               loading="lazy"
             />
           </div>
@@ -61,7 +50,7 @@ function Home({ handleRoute }: HomeProps) {
           </h5>
           <div className="relative h-full w-full rounded-lg">
             <Image
-              src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679543020/Portfolio/frame_foxlih.jpg"
+              src="/images/about.jpg"
               fill
               alt="project jpg"
               className="object-contain opacity-90"
@@ -69,6 +58,7 @@ function Home({ handleRoute }: HomeProps) {
             />
           </div>
         </div>
+        <div></div>
 
         <StepSequencer />
       </div>
