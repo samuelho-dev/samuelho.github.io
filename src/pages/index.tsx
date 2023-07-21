@@ -9,11 +9,6 @@ interface HomeProps {
 }
 
 function Home({ handleRoute }: HomeProps) {
-  const [gameModal, setGameModal] = useState(false);
-
-  const handleGameModal = () => {
-    setGameModal(!gameModal);
-  };
   return (
     <section className="flex w-full justify-center">
       <div className="flex h-full w-3/4 flex-col place-items-center gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-2 lg:grid lg:max-w-4xl lg:grid-flow-row-dense">
