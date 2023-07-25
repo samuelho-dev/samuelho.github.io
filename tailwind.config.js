@@ -16,7 +16,7 @@ module.exports = {
         customGreen: '#3FCD89',
         customBlue: '#54C4E7',
         customWhite: '#FEE9E1',
-        customOrange: '#E46B1F',
+        customOrange: '#E4572E',
         customRed: '#ED2626',
         customBlack: '#272727',
       },
