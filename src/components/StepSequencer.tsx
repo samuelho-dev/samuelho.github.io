@@ -81,9 +81,9 @@ function StepSequencer() {
   };
 
   return (
-    <div className="tileShadow col-span-2 row-span-2 h-full w-full items-center justify-between rounded-lg bg-customYellow">
+    <div className="tileShadow col-span-2 row-span-2 h-fit w-full items-center justify-between rounded-lg bg-[#D1D2C4]">
       <div className="flex w-full items-center justify-between p-4">
-        <h2 className="text-2xl font-extralight tracking-tight text-black">
+        <h2 className="text-2xl font-bold tracking-tight text-customRed">
           MAKE A BEAT!
         </h2>
         <div className="flex flex-col gap-2 md:flex-row">
@@ -96,7 +96,10 @@ function StepSequencer() {
               onChange={handleBpmChange}
             />
           </div>
-          <button onClick={handlePlay} className="rounded-lg bg-customRed px-1">
+          <button
+            onClick={handlePlay}
+            className="rounded-lg bg-customRed px-1 text-customWhite"
+          >
             {!play ? 'Play' : 'Pause'}
           </button>
         </div>
@@ -115,10 +118,10 @@ function StepSequencer() {
               {col.map((note, noteIdx) => (
                 <button
                   disabled={!loaded}
-                  className={`buttonShadow h-4 w-4 md:h-8 md:w-8 ${
+                  className={`buttonShadow h-4 w-4 border border-[#78797D] md:h-8 md:w-8 ${
                     note.isActive
-                      ? 'rounded-lg bg-customBlue'
-                      : 'rounded-md bg-customWhite'
+                      ? 'rounded-lg bg-[#78797D]'
+                      : 'rounded-md bg-[#c2c3c9]'
                   }`}
                   onClick={() => handleNoteClick(rowIdx, noteIdx)}
                   key={`note-${rowIdx}-${noteIdx}`}

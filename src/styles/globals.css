@@ -3,8 +3,7 @@
 @tailwind utilities;
 @font-face {
   font-family: 'CustomFont';
-  src: url('../../public/fonts/HW\ Topol\ Trial\ Regular.otf')
-    format('opentype');
+  src: url('../../public/fonts/proximanova.otf') format('opentype');
   font-display: swap; /* use "swap" to show the font as soon as possible */
 }
 body {

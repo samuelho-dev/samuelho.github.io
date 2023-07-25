@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import Routes from '../../types/types';
 import StepSequencer from '@/components/StepSequencer';
+import About from './about';
 
 interface HomeProps {
   handleRoute: Routes['handleRoute'];
@@ -10,20 +11,20 @@ interface HomeProps {
 
 function Home({ handleRoute }: HomeProps) {
   return (
-    <section className="flex w-full justify-center">
-      <div className="flex h-full w-3/4 flex-col place-items-center gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-2 lg:grid lg:max-w-4xl lg:grid-flow-row-dense">
+    <div className="flex w-full flex-col justify-center">
+      <section className="flex h-full  min-h-screen w-full flex-col place-items-center gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-2 lg:grid lg:max-w-4xl lg:grid-flow-row-dense">
         <div className="col-span-1 row-span-1 flex flex-col justify-center align-middle">
           <div>
-            <h3 className="text-white">WELCOME!</h3>
-            <h1 className="text-white">Take a look around</h1>
+            <h3 className="text-customWhite">WELCOME!</h3>
+            <h1 className="text-customWhite">Take a look around</h1>
           </div>
           <SomethingWeird />
         </div>
         <div
-          className="tileShadow col-span-1 row-span-1 flex h-60 w-52 cursor-pointer flex-col items-center justify-center rounded-lg bg-customGreen p-2"
+          className="tileShadow col-span-1 row-span-1 flex h-60 w-52 cursor-pointer flex-col items-center justify-center rounded-lg py-1"
           onClick={() => handleRoute('work')}
         >
-          <h5 className="absolute z-50 -translate-y-10 text-4xl font-bold tracking-wider">
+          <h5 className="absolute z-50 text-4xl font-bold tracking-wider text-customWhite">
             WORK
           </h5>
           <div className="relative h-full w-full">
@@ -31,16 +32,16 @@ function Home({ handleRoute }: HomeProps) {
               src="/images/work.jpg"
               alt="work jpg"
               fill
-              className="object-contain opacity-80"
+              className="object-contain opacity-80 saturate-150 sepia"
               loading="lazy"
             />
           </div>
         </div>
         <div
-          className="tileShadow col-span-1 row-span-1 flex h-60 w-60 cursor-pointer flex-col items-center justify-center rounded-lg bg-customBlue p-2"
+          className="tileShadow col-span-1 row-span-1 flex h-60 w-60 cursor-pointer flex-col items-center justify-center rounded-lg p-2"
           onClick={() => handleRoute('about')}
         >
-          <h5 className="absolute z-50 text-4xl font-bold tracking-wider text-black">
+          <h5 className="absolute z-50 text-4xl font-bold tracking-wider text-customWhite">
             ABOUT ME
           </h5>
           <div className="relative h-full w-full rounded-lg">
@@ -48,7 +49,7 @@ function Home({ handleRoute }: HomeProps) {
               src="/images/about.jpg"
               fill
               alt="project jpg"
-              className="object-contain opacity-90"
+              className="object-contain opacity-90 invert saturate-200 sepia"
               loading="lazy"
             />
           </div>
@@ -56,8 +57,9 @@ function Home({ handleRoute }: HomeProps) {
         <div></div>
 
         <StepSequencer />
-      </div>
-    </section>
+      </section>
+      <About />
+    </div>
   );
 }
 

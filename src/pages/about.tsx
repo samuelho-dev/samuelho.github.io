@@ -16,7 +16,7 @@ import {
   SiFastapi,
 } from 'react-icons/si';
 
-function about() {
+function About() {
   return (
     <section className="flex flex-col items-center justify-center px-2">
       <div className="flex w-full max-w-6xl flex-col items-center justify-center gap-4 md:w-3/4 md:flex-row">
@@ -126,4 +126,4 @@ function about() {
   );
 }
 
-export default about;
+export default About;

@@ -12,9 +12,9 @@ module.exports = {
       colors: {
         customLightPink: '#F1C5B1',
         customYellow: '#E3C732',
-        customGreen: '#5A9351',
-        customBlue: '#343097',
-        customWhite: '#EAE2E5',
+        customGreen: '#52796F',
+        customBlue: '#354F52',
+        customWhite: '#FEE9E1',
         customOrange: '#D76B27',
         customRed: '#C92929',
       },
