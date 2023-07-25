@@ -14,7 +14,7 @@ interface HomeProps {
 function Home({ handleRoute }: HomeProps) {
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <section className="flex min-h-screen w-full justify-between">
+      <section id="home" className="flex min-h-screen w-full justify-between">
         <div className="flex w-full flex-col items-center justify-center">
           <h1 className="text-base">Software Engineer/ Creative/ Analyst</h1>
 
@@ -60,22 +60,28 @@ function Home({ handleRoute }: HomeProps) {
           </div>
 
           <h5 className="w-full text-right text-2xl">
-            Full stack engineer passionate about building product
+            Passionate about building impactful products
           </h5>
         </div>
       </section>
-      <div className="-mt-20 flex w-full flex-col items-center rounded-lg bg-customRed pb-20">
+      <div
+        id="about"
+        className="-mt-20 flex h-fit w-full flex-col items-center rounded-lg bg-customRed bg-opacity-90 pb-20"
+      >
         <div className="w-full py-10 px-5">
           <h5 className="text-3xl">01</h5>
-          <h1 className="underline-black p-10 text-5xl underline decoration-black decoration-double decoration-2">
+          <h1 className="underline-black p-5 text-5xl underline decoration-black decoration-double decoration-2">
             ABOUT ME
           </h1>
         </div>
-        <div className="w-fit rounded-xl bg-black bg-opacity-10 py-20">
+        <div className="w-fit rounded-xl bg-black bg-opacity-20 py-20">
           <About />
         </div>
       </div>
-      <div className="flex w-full flex-col items-center rounded-lg py-20">
+      <div
+        id="work"
+        className="flex w-full flex-col items-center rounded-lg py-20"
+      >
         <div className="w-full rounded-lg bg-customGreen py-10 px-5">
           <h5 className="text-3xl ">02</h5>
           <h1 className="underline-black p-10 text-5xl underline decoration-black decoration-double decoration-2">
@@ -85,28 +91,46 @@ function Home({ handleRoute }: HomeProps) {
         <Work />
       </div>
       <div className="flex w-full flex-col items-center rounded-lg py-20">
-        <div className="w-full rounded-lg bg-customBlue py-10 px-5">
+        <div
+          id="contact"
+          className="w-full rounded-lg bg-customBlue py-10 px-5"
+        >
           <h5 className="text-3xl">03</h5>
           <h1 className="underline-black  p-10 text-5xl underline decoration-black decoration-double decoration-2">
             CONTACT
           </h1>
-          <div className="flex flex-col p-10 pt-5">
+          <div className="flex flex-col pt-5 md:p-10">
             <div className="rounded-lg bg-customBlack bg-opacity-10 p-5">
               <CopyEmail />
             </div>
             <div className="pt-5">
               <h3>Connect with me on :</h3>
-              <h5 className="text-2xl underline decoration-customBlack underline-offset-4">
-                LinkedIn
-              </h5>
-              <h5 className="text-2xl underline decoration-customBlack underline-offset-4">
-                Github
-              </h5>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://github.com/samuelho-dev"
+                  aria-label="github"
+                  target="_blank"
+                  className="text-2xl text-customWhite underline decoration-customBlack underline-offset-4"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/samuelho7/"
+                  aria-label="linkedin"
+                  target="_blank"
+                  className="text-2xl text-customWhite underline decoration-customBlack underline-offset-4"
+                >
+                  Github
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex w-full  flex-col items-center rounded-lg bg-customPurple p-20">
+      <div
+        id="beat"
+        className="flex w-full  flex-col items-center rounded-lg bg-customPurple py-20  md:p-20"
+      >
         <StepSequencer />
       </div>
     </div>

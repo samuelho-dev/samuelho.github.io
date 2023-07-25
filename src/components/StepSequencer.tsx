@@ -81,17 +81,17 @@ function StepSequencer() {
   };
 
   return (
-    <div className="akaiShadow col-span-2 row-span-2 h-fit w-fit items-center justify-between rounded-lg bg-[#D1D2C4] p-4 outline outline-2">
-      <div className="flex w-full items-center justify-between py-2">
-        <h2 className="akaiShadow rounded-lg bg-black bg-opacity-10 px-2 text-3xl font-extrabold tracking-tighter text-customRed outline outline-1 outline-offset-1 outline-black">
-          BEATMAKER
+    <div className="akaiShadow col-span-2 row-span-2 h-fit w-fit items-center justify-between rounded-lg bg-[#D1D2C4] p-5 outline outline-2">
+      <div className="flex w-full items-center justify-between gap-8 py-2">
+        <h2 className="akaiShadow rounded-lg bg-black bg-opacity-10 px-2 text-xl font-extrabold tracking-tighter text-customRed outline outline-1 outline-offset-1 outline-black md:text-3xl">
+          04 BEATMAKER
         </h2>
         <div className="flex flex-col gap-2 md:flex-row">
           <div className="flex gap-2">
-            <label className="whitespace-nowrap">Tempo :</label>
+            <label className="whitespace-nowrap text-sm">Tempo :</label>
             <input
               type="number"
-              className="w-12"
+              className="w-12 px-1 text-sm"
               value={tempo}
               onChange={handleBpmChange}
             />
@@ -109,7 +109,7 @@ function StepSequencer() {
           {['Hat', 'Snare', 'Kick', 'Bongo'].map((drum, i) => (
             <h5
               key={i}
-              className="akaiShadow rounded-md bg-customPurple px-1 text-center"
+              className="akaiShadow rounded-md bg-customPurple px-1 text-center text-sm md:text-lg"
             >
               {drum}
             </h5>
@@ -121,7 +121,7 @@ function StepSequencer() {
               {col.map((note, noteIdx) => (
                 <button
                   disabled={!loaded}
-                  className={`akaiShadow h-4 w-4 border border-[#78797D] md:h-8 md:w-8 ${
+                  className={`akaiShadow h-6 w-6 border border-[#78797D] md:h-8 md:w-8 ${
                     note.isActive
                       ? 'rounded-lg bg-[#78797D]'
                       : 'rounded-md bg-[#c2c3c9]'
