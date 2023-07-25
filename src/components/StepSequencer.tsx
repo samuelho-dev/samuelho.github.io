@@ -81,10 +81,10 @@ function StepSequencer() {
   };
 
   return (
-    <div className="tileShadow col-span-2 row-span-2 h-fit w-full items-center justify-between rounded-lg bg-[#D1D2C4]">
-      <div className="flex w-full items-center justify-between p-4">
-        <h2 className="text-2xl font-bold tracking-tight text-customRed">
-          MAKE A BEAT!
+    <div className="akaiShadow col-span-2 row-span-2 h-fit w-fit items-center justify-between rounded-lg bg-[#D1D2C4] p-4 outline outline-2">
+      <div className="flex w-full items-center justify-between py-2">
+        <h2 className="akaiShadow rounded-lg bg-black bg-opacity-10 px-2 text-3xl font-extrabold tracking-tighter text-customRed outline outline-1 outline-offset-1 outline-black">
+          BEATMAKER
         </h2>
         <div className="flex flex-col gap-2 md:flex-row">
           <div className="flex gap-2">
@@ -98,16 +98,19 @@ function StepSequencer() {
           </div>
           <button
             onClick={handlePlay}
-            className="rounded-lg bg-customRed px-1 text-customWhite"
+            className="akaiShadow rounded-lg bg-customRed px-1 text-customWhite"
           >
             {!play ? 'Play' : 'Pause'}
           </button>
         </div>
       </div>
       <div className="my-1 flex justify-center gap-2 md:gap-4">
-        <div className="buttonShadow flex flex-col justify-evenly gap-2 rounded-lg bg-customRed p-2">
+        <div className="flex flex-col justify-evenly gap-2 rounded-lg bg-customRed p-2">
           {['Hat', 'Snare', 'Kick', 'Bongo'].map((drum, i) => (
-            <h5 key={i} className="rounded-md bg-customBlue px-1 text-center">
+            <h5
+              key={i}
+              className="akaiShadow rounded-md bg-customPurple px-1 text-center"
+            >
               {drum}
             </h5>
           ))}
@@ -118,7 +121,7 @@ function StepSequencer() {
               {col.map((note, noteIdx) => (
                 <button
                   disabled={!loaded}
-                  className={`buttonShadow h-4 w-4 border border-[#78797D] md:h-8 md:w-8 ${
+                  className={`akaiShadow h-4 w-4 border border-[#78797D] md:h-8 md:w-8 ${
                     note.isActive
                       ? 'rounded-lg bg-[#78797D]'
                       : 'rounded-md bg-[#c2c3c9]'
