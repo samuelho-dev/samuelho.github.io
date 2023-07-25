@@ -1,8 +1,8 @@
 import React from 'react';
 import data from '../../util/resume.json';
 import { TbBrandNextjs, TbBrandTailwind } from 'react-icons/tb';
-import { FaNodeJs, FaReact } from 'react-icons/fa';
-import { FaAws } from 'react-icons/fa';
+import { FaNodeJs, FaReact, FaAws } from 'react-icons/fa';
+import { FiLink } from 'react-icons/fi';
 import {
   SiBackblaze,
   SiFirebase,
@@ -60,90 +60,96 @@ function Projects() {
     DiscordJs: <RxDiscordLogo color="white" />,
   };
   return (
-    <section className="max-w-6xl">
-      <h2 className=" text-slate-200">Projects</h2>
-      <ul className="flex flex-col items-center gap-24 md:gap-4">
-        {featuredProjects.map((project, i) => (
-          <li
-            key={i}
-            className={`flex w-fit flex-col gap-4  md:flex-row md:p-6 ${
-              i % 2 !== 0 && 'md:flex-row-reverse'
-            }`}
-          >
-            <div
-              className={`z-0 w-fit bg-customLightPink hover:bg-none ${
-                i % 2 !== 0 && 'md:ml-[-10%]'
-              }`}
-            >
-              <div className="tileShadow mix-blend-darken grayscale filter hover:filter-none">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  height={500}
-                  width={500}
-                  className="object-scale-down"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div
-              className={`z-10 flex w-full flex-col justify-center md:w-1/2 ${
-                i % 2 === 0 && 'md:ml-[-10%]'
+    <section className="flex w-full flex-col items-center gap-40">
+      <div className="flex w-full flex-col items-center">
+        <h2 className="w-full font-bold text-customWhite">Projects</h2>
+        <ul className="flex max-w-6xl flex-col items-center gap-10">
+          {featuredProjects.map((project, i) => (
+            <li
+              key={i}
+              className={`flex w-fit flex-col gap-4 md:flex-row md:p-6 ${
+                i % 2 !== 0 && 'md:flex-row-reverse'
               }`}
             >
               <div
-                className={`flex items-center gap-4 ${
-                  i % 2 === 0 && 'justify-end'
+                className={`z-0 w-fit bg-customWhite hover:bg-none ${
+                  i % 2 !== 0 && 'md:ml-[-10%]'
                 }`}
               >
-                <a
-                  href={project.source}
-                  className="cursor-pointer"
-                  target="_blank"
+                <div className="tileShadow mix-blend-darken grayscale filter hover:filter-none">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    height={500}
+                    width={500}
+                    className="object-scale-down"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div
+                className={`z-10 flex w-full flex-col justify-center md:w-1/2 ${
+                  i % 2 === 0 && 'md:ml-[-10%]'
+                }`}
+              >
+                <div
+                  className={`flex items-center gap-2 ${
+                    i % 2 === 0 && 'justify-end'
+                  }`}
                 >
-                  <h1 className=" text-customLightPink hover:text-opacity-80">
-                    {project.name}
-                  </h1>
-                </a>
-                <a href={project.source} target="_blank">
-                  <BsGithub className="fill-zinc-200" />
-                </a>
-              </div>
+                  <a
+                    href={project.source}
+                    className="cursor-pointer"
+                    target="_blank"
+                  >
+                    <h1 className=" font-bold text-customWhite hover:text-opacity-80">
+                      {project.name}
+                    </h1>
+                  </a>
+                  <a href={project.source} target="_blank">
+                    <FiLink className="text-customGreen" />
+                  </a>
+                </div>
 
-              <p
-                className={`flex text-zinc-300 ${
-                  i % 2 === 0 && 'justify-end '
-                }`}
-              >
-                {project.role}
-              </p>
-              <div className="bg-customBlue bg-opacity-80 p-2">
-                <p className={`text-slate-300 ${i % 2 === 0 && 'text-right'}`}>
-                  {project.description}
+                <p
+                  className={`flex text-customWhite opacity-60 ${
+                    i % 2 === 0 && 'justify-end '
+                  }`}
+                >
+                  {project.role}
                 </p>
-              </div>
+                <div className="bg-customGreen bg-opacity-80 p-2">
+                  <p
+                    className={`text-customWhite ${
+                      i % 2 === 0 && 'text-right'
+                    }`}
+                  >
+                    {project.description}
+                  </p>
+                </div>
 
-              <div
-                className={`flex flex-wrap gap-2 md:flex-nowrap md:gap-4 ${
-                  i % 2 === 0 && 'justify-end'
-                } `}
-              >
-                {project.technologies.map((tech, k) => (
-                  <div key={k} className={`flex items-center gap-2 pt-4`}>
-                    <div>{iconmap[tech]}</div>
-                    <sub className=" text-slate-300 md:whitespace-nowrap">
-                      {tech}
-                    </sub>
-                  </div>
-                ))}
+                <div
+                  className={`flex flex-wrap gap-2 md:flex-nowrap md:gap-4 ${
+                    i % 2 === 0 && 'justify-end'
+                  } `}
+                >
+                  {project.technologies.map((tech, k) => (
+                    <div key={k} className={`flex items-center gap-2 pt-4`}>
+                      <div>{iconmap[tech]}</div>
+                      <sub className=" text-customWhite md:whitespace-nowrap">
+                        {tech}
+                      </sub>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <div className="flex flex-col gap-2 pt-12">
-        <h5>Other Projects</h5>
-        <div className="w-full">
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="flex w-full flex-col items-center gap-2">
+        <h5 className="w-full font-bold text-customWhite">Other Projects</h5>
+        <div className="max-w-6xl">
           {otherProjects.map((project, i) => (
             <a
               key={i}
@@ -151,10 +157,10 @@ function Projects() {
               target="_blank"
               className="flex w-full"
             >
-              <div className="tileShadow m-2 flex w-full cursor-pointer flex-col justify-between bg-customOrange bg-opacity-70 p-2">
+              <div className="tileShadow m-2 flex w-full cursor-pointer flex-col justify-between bg-customOrange p-2">
                 <div className="flex items-center gap-2">
                   <div>{iconmap.Plus}</div>
-                  <h5 className="w-fit border-b-2 border-transparent  transition duration-300 hover:border-customRed">
+                  <h5 className="w-fit border-b-2 border-transparent  transition duration-300 hover:border-customBlack">
                     {project.name}
                   </h5>
                 </div>
