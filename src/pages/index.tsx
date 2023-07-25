@@ -5,6 +5,7 @@ import Routes from '../../types/types';
 import StepSequencer from '@/components/StepSequencer';
 import About from './about';
 import Work from './work';
+import CopyEmail from '@/components/CopyEmail';
 
 interface HomeProps {
   handleRoute: Routes['handleRoute'];
@@ -59,8 +60,7 @@ function Home({ handleRoute }: HomeProps) {
           </div>
 
           <h5 className="w-full text-right text-2xl">
-            Multidiciplinary full-stack software developer empowered to create
-            impactful products
+            Full stack engineer passionate about building product
           </h5>
         </div>
       </section>
@@ -86,15 +86,22 @@ function Home({ handleRoute }: HomeProps) {
       </div>
       <div className="flex w-full flex-col items-center rounded-lg py-20">
         <div className="w-full rounded-lg bg-customBlue py-10 px-5">
-          <h5 className="text-3xl ">03</h5>
-          <h1 className="underline-black p-10 text-5xl underline decoration-black decoration-double decoration-2">
+          <h5 className="text-3xl">03</h5>
+          <h1 className="underline-black  p-10 text-5xl underline decoration-black decoration-double decoration-2">
             CONTACT
           </h1>
-          <div>
-            <h5>LinkedIn</h5>
-            <h5>Github</h5>
-            <div>
-              <h5>Email</h5>
+          <div className="flex flex-col p-10 pt-5">
+            <div className="rounded-lg bg-customBlack bg-opacity-10 p-5">
+              <CopyEmail />
+            </div>
+            <div className="pt-5">
+              <h3>Connect with me on :</h3>
+              <h5 className="text-2xl underline decoration-customBlack underline-offset-4">
+                LinkedIn
+              </h5>
+              <h5 className="text-2xl underline decoration-customBlack underline-offset-4">
+                Github
+              </h5>
             </div>
           </div>
         </div>
