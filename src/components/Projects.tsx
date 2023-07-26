@@ -67,13 +67,13 @@ function Projects() {
           {featuredProjects.map((project, i) => (
             <li
               key={i}
-              className={`flex w-fit flex-col gap-4 md:flex-row md:p-6 ${
-                i % 2 !== 0 && 'md:flex-row-reverse'
+              className={`flex w-full flex-col items-center gap-4 py-10 md:p-6 xl:w-fit xl:flex-row ${
+                i % 2 !== 0 && 'xl:flex-row-reverse'
               }`}
             >
               <div
                 className={`z-0 w-fit bg-customWhite hover:bg-none ${
-                  i % 2 !== 0 && 'md:ml-[-10%]'
+                  i % 2 !== 0 && 'xl:ml-[-10%]'
                 }`}
               >
                 <div className="tileShadow mix-blend-darken grayscale filter hover:filter-none">
@@ -88,8 +88,8 @@ function Projects() {
                 </div>
               </div>
               <div
-                className={`z-10 flex w-full flex-col justify-center md:w-1/2 ${
-                  i % 2 === 0 && 'md:ml-[-10%]'
+                className={`z-10 flex w-full flex-col justify-center xl:w-1/2 ${
+                  i % 2 === 0 && 'xl:ml-[-10%]'
                 }`}
               >
                 <div

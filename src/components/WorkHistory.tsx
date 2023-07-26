@@ -21,10 +21,10 @@ function WorkHistory() {
   return (
     <section className="flex flex-col justify-center gap-4 py-16">
       <h2 className="font-bold text-customWhite">Work History</h2>
-      <div className="tileShadow flex flex-col rounded-xl bg-customWhite outline outline-1 md:flex-row">
+      <div className="tileShadow flex flex-col rounded-xl bg-customWhite outline outline-1 xl:flex-row">
         <div
           ref={containerRef}
-          className="flex w-full flex-col gap-6 rounded-xl bg-customOrange p-4 py-10 md:w-1/2"
+          className="flex w-full flex-col gap-6 rounded-xl bg-customOrange p-4 py-10 xl:w-1/2"
         >
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-extrabold">Previously..</h2>
@@ -46,7 +46,7 @@ function WorkHistory() {
                 onClick={(e) => {
                   handleDetails(e, entry);
                 }}
-                className={`tileShadow flex cursor-pointer justify-between rounded-xl p-2 text-2xl outline-dotted hover:outline-double md:p-6 ${
+                className={`tileShadow flex cursor-pointer justify-between rounded-xl p-2 text-xl outline-dotted hover:outline-double xl:p-6 xl:text-2xl ${
                   detail.employer === entry.employer
                     ? 'bg-customBlack outline-double'
                     : 'bg-customOrange'
@@ -57,7 +57,7 @@ function WorkHistory() {
             ))}
           </div>
         </div>
-        <div ref={detailRef} className="w-full p-4 md:w-1/2">
+        <div ref={detailRef} className="w-full p-4 xl:w-1/2">
           <div className="flex h-24 flex-col items-start justify-between rounded-lg bg-black bg-opacity-10 p-2 md:flex-row md:items-center">
             <div className="flex w-full flex-wrap items-center gap-1 md:flex-nowrap">
               <h2 className="whitespace-nowrap font-semibold text-customBlack">

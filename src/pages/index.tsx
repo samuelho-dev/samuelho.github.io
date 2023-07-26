@@ -1,6 +1,5 @@
 import SomethingWeird from '@/components/SomethingWeird';
-import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Routes from '../../types/types';
 import StepSequencer from '@/components/StepSequencer';
 import About from './about';
@@ -12,12 +11,24 @@ interface HomeProps {
 }
 
 function Home({ handleRoute }: HomeProps) {
+  const [index, setIndex] = useState(0);
+  const headers = ['SOFTWARE DEVELOPER', 'CREATIVE', 'ANALYST'];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % headers.length);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  });
+
   return (
     <div className="flex w-full flex-col items-center justify-center">
       <section id="home" className="flex min-h-screen w-full justify-between">
         <div className="flex w-full flex-col items-center justify-center">
-          <h1 className="text-base">Software Engineer/ Creative/ Analyst</h1>
-
+          <h1 className="text-lg font-extrabold text-customLightPink">
+            {headers[index]}
+          </h1>
           <div className="mt-20 mb-14 h-fit w-full px-10">
             <svg
               viewBox="0 0 881 200"
@@ -59,7 +70,7 @@ function Home({ handleRoute }: HomeProps) {
             </svg>
           </div>
 
-          <h5 className="w-full text-right text-2xl">
+          <h5 className="w-full text-center text-xl text-customLightPink md:text-right">
             Passionate about building impactful products
           </h5>
         </div>
@@ -74,7 +85,7 @@ function Home({ handleRoute }: HomeProps) {
             ABOUT ME
           </h1>
         </div>
-        <div className="w-fit rounded-xl bg-black bg-opacity-20 py-20">
+        <div className="mx-10 w-fit rounded-xl bg-black bg-opacity-20 py-20">
           <About />
         </div>
       </div>

@@ -19,7 +19,7 @@ import {
 function About() {
   return (
     <section className="flex flex-col items-center justify-center px-2">
-      <div className="flex w-full max-w-6xl flex-col items-center justify-center gap-4 md:w-3/4 md:flex-row">
+      <div className="flex w-full max-w-6xl flex-col items-center justify-center gap-4 md:w-3/4 xl:flex-row">
         <div className="w-fit bg-customLightPink hover:bg-none">
           <div className="mix-blend-darken grayscale filter hover:filter-none">
             <Image
@@ -31,7 +31,7 @@ function About() {
             />
           </div>
         </div>
-        <div className="flex flex-col px-2 tracking-wide text-white md:w-1/2">
+        <div className="flex w-full flex-col px-2 tracking-wide text-white xl:w-1/2">
           <p>
             Hey! My name is Samuel and I am a software developer passionate
             about creating impactful products and solving business problems. I

@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Analytics />
-      <div className="flex min-h-screen w-full items-center justify-between bg-[#252323] px-0 lg:py-5 lg:px-28">
+      <div className="flex min-h-screen w-full items-center justify-between bg-[#252323] px-0 lg:py-5 lg:px-20">
         <Layout handleRoute={handleRoute}>
           <Component {...pageProps} handleRoute={handleRoute} />
         </Layout>
