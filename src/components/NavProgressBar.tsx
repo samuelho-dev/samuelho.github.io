@@ -5,23 +5,22 @@ interface NavProgressBarProps {
   itemRef: React.RefObject<HTMLDivElement>;
 }
 function NavProgressBar({ itemRef }: NavProgressBarProps) {
-  const [hookedYPostion, setHookedYPosition] = React.useState(0);
+  const [scrollProgress, setScrollProgress] = React.useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       if (itemRef.current) {
         const rect = itemRef.current.getBoundingClientRect();
-        const scrollTop = itemRef.current.scrollHeight;
-        const parentHeight = rect.height / 4;
-        const parentTop = rect.top + scrollTop;
-        let scrollProgress = (scrollTop - parentTop) / parentHeight;
+        const windowHeight = window.innerHeight;
 
-        // Check if at bottom of the page
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-          scrollProgress = 1;
-        }
+        const scrolledPast = rect.top <= -rect.height;
+        const endInView = rect.bottom <= windowHeight;
+        const progress =
+          (windowHeight - rect.top) / (windowHeight + rect.height);
 
-        setHookedYPosition(Math.min(Math.max(scrollProgress, 0), 1));
+        setScrollProgress(
+          scrolledPast || endInView ? 1 : Math.max(0, progress),
+        );
       }
     };
 
@@ -34,12 +33,12 @@ function NavProgressBar({ itemRef }: NavProgressBarProps) {
 
   return (
     <motion.div
-      animate={{ height: `${Math.round(hookedYPostion * 100)}%` }}
+      animate={{ height: `${Math.round(scrollProgress * 100)}%` }}
       className="absolute right-5 z-50 h-full w-2 rounded-b-lg bg-customBlack"
     >
       <motion.div
         className={`relative -mt-2 h-2 rounded-lg rounded-b-lg bg-white`}
-        animate={{ top: `${Math.round(hookedYPostion * 100)}%` }}
+        animate={{ top: `${Math.round(scrollProgress * 100)}%` }}
         role="progressbar"
       />
     </motion.div>
