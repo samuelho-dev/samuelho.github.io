@@ -121,7 +121,7 @@
     {
       "name": "GPT Market Analytics",
       "description": "An API utilizing GPT to process and compare news articles about the top companies in a given industry",
-      "technologies": ["Python", "Fast API", "Open AI"],
+      "technologies": ["Python", "Flask", "Open AI"],
       "source": "https://github.com/samuelho-dev/marketanalyticsapi"
     },
     {

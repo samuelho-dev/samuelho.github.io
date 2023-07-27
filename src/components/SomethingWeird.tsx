@@ -27,7 +27,7 @@ function SomethingWeird() {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  });
 
   return (
     <div className="flex h-fit w-fit items-center gap-4">

@@ -13,6 +13,7 @@ import {
   SiReact,
   SiTrpc,
   SiTypescript,
+  SiFlask,
 } from 'react-icons/si';
 import { TbBrandTwilio } from 'react-icons/tb';
 import { RxDiscordLogo } from 'react-icons/rx';
@@ -44,6 +45,7 @@ function Projects() {
     Sequelize: <SiSequelize color="white" />,
     'Open AI': <SiOpenai color="white" />,
     'Fast API': <SiFastapi color="white" />,
+    Flask: <SiFlask color="white" />,
     Python: <SiPython color="white" />,
     React: <SiReact color="white" />,
     Plus: <HiOutlinePlusCircle color="white" />,
@@ -157,7 +159,7 @@ function Projects() {
               target="_blank"
               className="flex w-full"
             >
-              <div className="tileShadow m-2 flex w-full cursor-pointer flex-col justify-between bg-customOrange p-2">
+              <div className="tileShadow m-2 flex w-full cursor-pointer flex-col justify-between bg-customRoyalBlue p-2">
                 <div className="flex items-center gap-2">
                   <div>{iconmap.Plus}</div>
                   <h5 className="w-fit border-b-2 border-transparent  transition duration-300 hover:border-customBlack">
