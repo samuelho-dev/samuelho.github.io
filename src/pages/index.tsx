@@ -1,34 +1,64 @@
-import SomethingWeird from '@/components/SomethingWeird';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Routes from '../../types/types';
 import StepSequencer from '@/components/StepSequencer';
 import About from './about';
 import Work from './work';
 import CopyEmail from '@/components/CopyEmail';
-
+import { motion, AnimatePresence } from 'framer-motion';
+import usePageRefs from 'util/pageRef';
 interface HomeProps {
   handleRoute: Routes['handleRoute'];
+  pageRef: React.RefObject<HTMLDivElement>;
+  frontpageRef: React.RefObject<HTMLDivElement>;
+  aboutRef: React.RefObject<HTMLDivElement>;
+  workRef: React.RefObject<HTMLDivElement>;
+  contactRef: React.RefObject<HTMLDivElement>;
+  beatRef: React.RefObject<HTMLDivElement>;
 }
 
-function Home({ handleRoute }: HomeProps) {
+function Home({
+  handleRoute,
+  pageRef,
+  frontpageRef,
+  aboutRef,
+  workRef,
+  contactRef,
+  beatRef,
+}: HomeProps) {
   const [index, setIndex] = useState(0);
+  const {} = usePageRefs();
+  const [seconds, setSeconds] = useState(0);
+
   const headers = ['SOFTWARE DEVELOPER', 'CREATIVE', 'ANALYST'];
-
   useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % headers.length);
+    const interval = setInterval(() => {
+      setSeconds((s) => {
+        if (s >= 3) {
+          setIndex((p) => (p + 1) % headers.length);
+          return 0;
+        } else {
+          return s + 1;
+        }
+      });
     }, 3000);
-
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   });
 
   return (
-    <div className="flex w-full flex-col items-center justify-center">
-      <section id="home" className="flex min-h-screen w-full justify-between">
+    <div
+      ref={pageRef}
+      className="flex w-full flex-col items-center justify-center"
+    >
+      <section
+        id="home"
+        ref={frontpageRef}
+        className="flex min-h-screen w-full justify-between"
+      >
         <div className="flex w-full flex-col items-center justify-center">
-          <h1 className="text-lg font-extrabold text-customLightPink">
+          <h1 className="h-16 text-lg font-extrabold text-customLightPink">
             {headers[index]}
           </h1>
+
           <div className="mt-20 mb-14 h-fit w-full px-10">
             <svg
               viewBox="0 0 881 200"
@@ -77,6 +107,7 @@ function Home({ handleRoute }: HomeProps) {
       </section>
       <div
         id="about"
+        ref={aboutRef}
         className="-mt-20 flex h-fit w-full flex-col items-center rounded-lg bg-customRed bg-opacity-90 pb-20"
       >
         <div className="w-full py-10 px-5">
@@ -91,6 +122,7 @@ function Home({ handleRoute }: HomeProps) {
       </div>
       <div
         id="work"
+        ref={workRef}
         className="flex w-full flex-col items-center rounded-lg py-20"
       >
         <div className="w-full rounded-lg bg-customGreen py-10 px-5">
@@ -104,6 +136,7 @@ function Home({ handleRoute }: HomeProps) {
       <div className="flex w-full flex-col items-center rounded-lg py-20">
         <div
           id="contact"
+          ref={contactRef}
           className="w-full rounded-lg bg-customBlue py-10 px-5"
         >
           <h5 className="text-3xl">03</h5>
@@ -140,6 +173,7 @@ function Home({ handleRoute }: HomeProps) {
       </div>
       <div
         id="beat"
+        ref={beatRef}
         className="flex w-full  flex-col items-center rounded-lg bg-customPurple py-20  md:p-20"
       >
         <StepSequencer />
