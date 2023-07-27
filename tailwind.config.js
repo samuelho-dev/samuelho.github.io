@@ -13,7 +13,7 @@ module.exports = {
         customLightPink: '#F1C5B1',
         customYellow: '#E3C732',
         customPurple: '#A45EDB',
-        customGreen: '#3FCD89',
+        customGreen: '#4AA573',
         customBlue: '#54C4E7',
         customWhite: '#FEE9E1',
         customOrange: '#E4572E',
