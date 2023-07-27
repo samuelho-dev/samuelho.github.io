@@ -13,7 +13,7 @@ function SomethingWeird() {
       const offsetX = Math.max(0, Math.min(mouseX, rect.width));
       const offsetY = Math.max(0, Math.min(mouseY, rect.height));
 
-      return { left: offsetX, top: offsetY };
+      return { left: offsetX, top: offsetY + 5 };
     }
   };
   const handleMouseMove = (e: MouseEvent) => {
