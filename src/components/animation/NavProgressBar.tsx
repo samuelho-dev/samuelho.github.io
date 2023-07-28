@@ -39,7 +39,7 @@ function NavProgressBar({ itemRef }: NavProgressBarProps) {
           ? { height: `${Math.round(scrollProgress * 100)}%` }
           : { width: `${Math.round(scrollProgress * 100)}%` }
       }
-      className={`absolute top-1/2 z-50 -ml-2 flex h-2 w-2 rounded-r-lg bg-customBlack lg:top-0 lg:right-5 lg:rounded-b-lg lg:rounded-tr-none xl:h-full`}
+      className={`absolute top-1/2 z-50 -ml-2 flex max-h-2 w-2 rounded-r-lg bg-customBlack lg:top-0 lg:right-5 lg:max-h-full lg:rounded-b-lg lg:rounded-tr-none xl:h-full`}
     >
       <motion.div
         className={`relative -ml-2 h-2 w-2 rounded-lg bg-white lg:ml-0 lg:-mt-2`}
