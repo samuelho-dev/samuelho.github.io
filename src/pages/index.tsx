@@ -44,7 +44,7 @@ function Home({
           return s + 1;
         }
       });
-    }, 1500);
+    }, 1200);
     return () => clearInterval(interval);
   });
 
@@ -66,7 +66,7 @@ function Home({
             <NameSvg />
           </div>
 
-          <h5 className="w-1/2 text-center text-xl text-customLightPink md:text-right">
+          <h5 className="w-1/2 text-right text-xl text-customLightPink">
             Data, Design, and Technology
           </h5>
         </div>
