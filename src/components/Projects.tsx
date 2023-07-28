@@ -26,6 +26,7 @@ import { BsFiletypeMdx, BsGithub } from 'react-icons/bs';
 import { HiOutlinePlusCircle } from 'react-icons/hi';
 import { SlPaypal } from 'react-icons/sl';
 import Image from 'next/image';
+import ProjectContainer from './animation/ProjectContainer';
 
 interface IconMap {
   [key: string]: React.ReactElement;
@@ -73,8 +74,9 @@ function Projects() {
                 i % 2 !== 0 && 'xl:flex-row-reverse'
               }`}
             >
-              <div
-                className={`z-0 w-fit bg-customWhite hover:bg-none ${
+              <ProjectContainer
+                bool={i % 2 !== 0}
+                style={`z-0 w-fit bg-customWhite hover:bg-none ${
                   i % 2 !== 0 && 'xl:ml-[-10%]'
                 }`}
               >
@@ -88,9 +90,10 @@ function Projects() {
                     loading="lazy"
                   />
                 </div>
-              </div>
-              <div
-                className={`z-10 flex w-full flex-col justify-center xl:w-1/2 ${
+              </ProjectContainer>
+              <ProjectContainer
+                bool={i % 2 === 0}
+                style={`z-10 flex w-full flex-col justify-center xl:w-1/2 ${
                   i % 2 === 0 && 'xl:ml-[-10%]'
                 }`}
               >
@@ -144,7 +147,7 @@ function Projects() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </ProjectContainer>
             </li>
           ))}
         </ul>

@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
 import data from '../../util/resume.json';
 import { RiFileDownloadLine } from 'react-icons/ri';
-import { TbArrowBadgeRight } from 'react-icons/tb';
 import Link from 'next/link';
 import { Experience } from '../../types/types';
+import ListElement from './animation/ListElement';
+import { TbArrowBadgeRight } from 'react-icons/tb';
+
 function WorkHistory() {
   const experience = data.workExperience;
   const [detail, setDetail] = useState<Experience>(data.workExperience[0]);
@@ -57,9 +59,12 @@ function WorkHistory() {
             ))}
           </div>
         </div>
-        <div ref={detailRef} className="w-full p-4 xl:w-1/2">
-          <div className="flex h-24 flex-col items-start justify-between rounded-lg bg-black bg-opacity-10 p-2 md:flex-row md:items-center">
-            <div className="flex w-full flex-wrap items-center gap-1 md:flex-nowrap">
+        <div
+          ref={detailRef}
+          className="flex h-full flex-col gap-4 p-4 xl:w-1/2"
+        >
+          <div className="flex flex-col items-start justify-between gap-4 rounded-lg bg-black bg-opacity-10 p-2 md:flex-row md:items-center">
+            <div className="flex flex-wrap items-center gap-1 md:flex-nowrap">
               <h2 className="whitespace-nowrap font-semibold text-customBlack">
                 {detail.title}
               </h2>
@@ -79,16 +84,16 @@ function WorkHistory() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col justify-center gap-4 p-2">
+          <ul className="flex flex-col gap-4">
             {detail.responsibilities.map((el, i) => (
-              <p key={i} className="flex items-start justify-start gap-2">
-                <span className="h-4 w-4 bg-customRoyalBlue">
+              <ListElement key={i} style="flex items-start justify-start gap-2">
+                <span className="h-4 w-4 bg-customRoyalBlue text-customWhite">
                   <TbArrowBadgeRight />
                 </span>
                 <span className="font-mono text-customBlack">{el}</span>
-              </p>
+              </ListElement>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>
