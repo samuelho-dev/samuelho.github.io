@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useIsLarge } from 'util/mediaQuery';
 
 interface NavProgressBarProps {
   itemRef: React.RefObject<HTMLDivElement>;
 }
 function NavProgressBar({ itemRef }: NavProgressBarProps) {
   const [scrollProgress, setScrollProgress] = React.useState(0);
-
+  const isLarge = useIsLarge();
   useEffect(() => {
     const handleScroll = () => {
       if (itemRef.current) {
@@ -33,12 +34,20 @@ function NavProgressBar({ itemRef }: NavProgressBarProps) {
 
   return (
     <motion.div
-      animate={{ height: `${Math.round(scrollProgress * 100)}%` }}
-      className="absolute right-5 z-50 h-full w-2 rounded-b-lg bg-customBlack"
+      animate={
+        isLarge
+          ? { height: `${Math.round(scrollProgress * 100)}%` }
+          : { width: `${Math.round(scrollProgress * 100)}%` }
+      }
+      className={`absolute top-1/2 z-50 -ml-2 flex h-2 w-2 rounded-r-lg bg-customBlack lg:top-0 lg:right-5 lg:rounded-b-lg lg:rounded-tr-none xl:h-full`}
     >
       <motion.div
-        className={`relative -mt-2 h-2 rounded-lg rounded-b-lg bg-white`}
-        animate={{ top: `${Math.round(scrollProgress * 100)}%` }}
+        className={`relative -ml-2 h-2 w-2 rounded-lg bg-white lg:ml-0 lg:-mt-2`}
+        animate={
+          isLarge
+            ? { top: `${Math.round(scrollProgress * 100)}%` }
+            : { left: `${Math.round(scrollProgress * 100)}%` }
+        }
         role="progressbar"
       />
     </motion.div>
