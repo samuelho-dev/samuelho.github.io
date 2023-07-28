@@ -2,8 +2,9 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import Routes from '../../types/types';
 import SomethingWeird from '@/components/SomethingWeird';
 import Link from 'next/link';
-import NavProgressBar from '@/components/NavProgressBar';
+import NavProgressBar from '@/components/animation/NavProgressBar';
 import usePageRefs from 'util/pageRef';
+import { useEffect, useRef } from 'react';
 
 interface NavbarProps {
   handleRoute: Routes['handleRoute'];
@@ -24,8 +25,33 @@ function Navbar({
   contactRef,
   beatRef,
 }: NavbarProps) {
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navRef.current) {
+        const scrollHeight = document.documentElement.scrollHeight;
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const windowHeight = window.innerHeight;
+        const totalScrollHeight = scrollHeight - windowHeight;
+        const scrollRatio = scrollTop / totalScrollHeight;
+        navRef.current.scrollLeft =
+          scrollRatio *
+          (navRef.current.scrollWidth - navRef.current.clientWidth);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-0 z-50 flex h-fit w-full gap-5 overflow-x-scroll bg-customBlack p-2 md:bg-opacity-10 lg:w-1/6 lg:max-w-[15rem] lg:flex-col lg:gap-4 lg:overflow-x-auto xl:h-full">
+    <nav
+      ref={navRef}
+      className="fixed top-0 z-50 flex h-fit w-full gap-5 overflow-x-scroll bg-customBlack p-2 lg:h-full lg:w-1/6 lg:flex-col lg:gap-4 lg:overflow-x-auto lg:bg-opacity-10"
+    >
       <div className="flex items-center gap-2 lg:flex-col lg:items-start lg:py-16">
         <Link href="/">
           <h3 className="font-extrabold text-customWhite">WELCOME!</h3>
@@ -36,8 +62,8 @@ function Navbar({
         <SomethingWeird />
       </div>
 
-      <ul className="flex h-fit w-full gap-4 lg:flex-col">
-        <li>
+      <ul className="flex h-fit w-full justify-between gap-4 lg:flex-col">
+        <li className="w-full min-w-[10rem]">
           <a
             href="#about"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customRed px-2"
@@ -47,7 +73,7 @@ function Navbar({
             <h3 className="whitespace-nowrap font-semibold">ABOUT ME</h3>
           </a>
         </li>
-        <li>
+        <li className="w-full min-w-[10rem]">
           <a
             href="#work"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customRoyalBlue px-2"
@@ -57,7 +83,7 @@ function Navbar({
             <h3 className="whitespace-nowrap font-semibold">WORK</h3>
           </a>
         </li>
-        <li>
+        <li className="w-full min-w-[10rem]">
           <a
             href="#contact"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customBlue px-2"
@@ -67,7 +93,7 @@ function Navbar({
             <h3 className="whitespace-nowrap font-semibold">CONTACT</h3>
           </a>
         </li>
-        <li>
+        <li className="w-full min-w-[10rem]">
           <a
             href="#beat"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customPurple px-2"
