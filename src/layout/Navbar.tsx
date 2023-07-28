@@ -63,7 +63,7 @@ function Navbar({
       </div>
 
       <ul className="flex h-fit w-full justify-between gap-4 lg:flex-col">
-        <li className="w-full min-w-[10rem]">
+        <li className="w-full min-w-[10rem] max-w-[15rem]">
           <a
             href="#about"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customRed px-2"
@@ -73,7 +73,7 @@ function Navbar({
             <h3 className="whitespace-nowrap font-semibold">ABOUT ME</h3>
           </a>
         </li>
-        <li className="w-full min-w-[10rem]">
+        <li className="w-full min-w-[10rem] max-w-[15rem]">
           <a
             href="#work"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customRoyalBlue px-2"
@@ -83,7 +83,7 @@ function Navbar({
             <h3 className="whitespace-nowrap font-semibold">WORK</h3>
           </a>
         </li>
-        <li className="w-full min-w-[10rem]">
+        <li className="w-full min-w-[10rem] max-w-[15rem]">
           <a
             href="#contact"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customBlue px-2"
@@ -93,7 +93,7 @@ function Navbar({
             <h3 className="whitespace-nowrap font-semibold">CONTACT</h3>
           </a>
         </li>
-        <li className="w-full min-w-[10rem]">
+        <li className="w-full min-w-[10rem] max-w-[15rem]">
           <a
             href="#beat"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customPurple px-2"
