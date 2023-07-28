@@ -29,7 +29,7 @@ function Navbar({
       <div className="flex items-center gap-2 lg:flex-col lg:items-start lg:py-16">
         <Link href="/">
           <h3 className="font-extrabold text-customWhite">WELCOME!</h3>
-          <p className="whitespace-nowrap font-semibold text-customWhite">
+          <p className="whitespace-nowrap font-semibold tracking-tight text-customWhite">
             Take a look around.
           </p>
         </Link>
@@ -50,7 +50,7 @@ function Navbar({
         <li>
           <a
             href="#work"
-            className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customGreen px-2"
+            className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customRoyalBlue px-2"
           >
             <NavProgressBar itemRef={workRef} />
             <p className="text-sm">02</p>

@@ -13,18 +13,18 @@ import {
   SiAdobe,
   SiReact,
   SiPython,
-  SiFastapi,
+  SiFlask,
 } from 'react-icons/si';
 
 function About() {
   return (
     <section className="flex flex-col items-center justify-center px-2">
-      <div className="flex w-full max-w-6xl flex-col items-center justify-center gap-4 md:w-3/4 xl:flex-row">
+      <div className="flex w-full flex-col items-center justify-center gap-4 md:w-3/4 xl:flex-row">
         <div className="w-fit bg-customLightPink hover:bg-none">
           <div className="mix-blend-darken grayscale filter hover:filter-none">
             <Image
               src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679961213/Portfolio/525F8B4C-5303-4E2E-B816-A605BB0455A7_1_105_c_ordpsi.jpg"
-              height={100}
+              height={500}
               width={300}
               alt="profile"
               loading="lazy"
@@ -104,8 +104,8 @@ function About() {
               <sub>Python</sub>
             </li>
             <li className="flex items-center gap-2">
-              <SiFastapi />
-              <sub>Fast API</sub>
+              <SiFlask />
+              <sub>Flask</sub>
             </li>
             <li className="flex items-center gap-2">
               <SiAbletonlive />

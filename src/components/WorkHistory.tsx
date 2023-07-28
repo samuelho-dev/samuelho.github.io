@@ -24,7 +24,7 @@ function WorkHistory() {
       <div className="tileShadow flex flex-col rounded-xl bg-customWhite outline outline-1 xl:flex-row">
         <div
           ref={containerRef}
-          className="flex w-full flex-col gap-6 rounded-xl bg-customOrange p-4 py-10 xl:w-1/2"
+          className="flex w-full flex-col gap-6 rounded-xl bg-customRoyalBlue p-4 py-10 xl:w-1/2"
         >
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-extrabold">Previously..</h2>
@@ -49,7 +49,7 @@ function WorkHistory() {
                 className={`tileShadow flex cursor-pointer justify-between rounded-xl p-2 text-xl outline-dotted hover:outline-double xl:p-6 xl:text-2xl ${
                   detail.employer === entry.employer
                     ? 'bg-customBlack outline-double'
-                    : 'bg-customOrange'
+                    : 'bg-customRoyalBlue'
                 }`}
               >
                 {entry.employer}
@@ -64,9 +64,9 @@ function WorkHistory() {
                 {detail.title}
               </h2>
               <div className="flex cursor-pointer items-center gap-1">
-                <h3 className="text-customOrange opacity-90">@</h3>
+                <h3 className="text-customRoyalBlue opacity-90">@</h3>
                 <a href={detail.employer_url} target="_blank">
-                  <h3 className="border-b-2 border-transparent font-semibold text-customOrange opacity-90 transition duration-300 hover:border-customOrange md:whitespace-nowrap">
+                  <h3 className="border-b-2 border-transparent font-semibold text-customRoyalBlue opacity-90 transition duration-300 hover:border-customRoyalBlue md:whitespace-nowrap">
                     {detail.employer}
                   </h3>
                 </a>
@@ -82,7 +82,7 @@ function WorkHistory() {
           <div className="flex flex-col justify-center gap-4 p-2">
             {detail.responsibilities.map((el, i) => (
               <p key={i} className="flex items-start justify-start gap-2">
-                <span className="h-4 w-4 bg-customOrange">
+                <span className="h-4 w-4 bg-customRoyalBlue">
                   <TbArrowBadgeRight />
                 </span>
                 <span className="font-mono text-customBlack">{el}</span>
