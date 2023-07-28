@@ -1,26 +1,109 @@
-import React from 'react';
-
+import { motion, useScroll, useSpring } from 'framer-motion';
 import Routes from '../../types/types';
+import SomethingWeird from '@/components/SomethingWeird';
+import Link from 'next/link';
+import NavProgressBar from '@/components/animation/NavProgressBar';
+import usePageRefs from 'util/pageRef';
+import { useEffect, useRef } from 'react';
 
 interface NavbarProps {
   handleRoute: Routes['handleRoute'];
+  pageRef: React.RefObject<HTMLDivElement>;
+  frontpageRef: React.RefObject<HTMLDivElement>;
+  aboutRef: React.RefObject<HTMLDivElement>;
+  workRef: React.RefObject<HTMLDivElement>;
+  contactRef: React.RefObject<HTMLDivElement>;
+  beatRef: React.RefObject<HTMLDivElement>;
 }
 
-function Navbar({ handleRoute }: NavbarProps) {
+function Navbar({
+  handleRoute,
+  pageRef,
+  frontpageRef,
+  aboutRef,
+  workRef,
+  contactRef,
+  beatRef,
+}: NavbarProps) {
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navRef.current) {
+        const scrollHeight = document.documentElement.scrollHeight;
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const windowHeight = window.innerHeight;
+        const totalScrollHeight = scrollHeight - windowHeight;
+        const scrollRatio = scrollTop / totalScrollHeight;
+        navRef.current.scrollLeft =
+          scrollRatio *
+          (navRef.current.scrollWidth - navRef.current.clientWidth);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="flex items-center gap-4">
-      <h2 className="cursor-pointer" onClick={() => handleRoute('work')}>
-        WORK
-      </h2>
-      <h2 className="cursor-pointer" onClick={() => handleRoute('about')}>
-        ABOUT
-      </h2>
-      <div
-        className=" flex rounded-full bg-customBlue  px-4 hover:bg-opacity-70"
-        onClick={() => handleRoute('contact')}
-      >
-        <h2 className="cursor-pointer">CONTACT</h2>
+    <nav
+      ref={navRef}
+      className="fixed top-0 z-50 flex h-fit w-full gap-5 overflow-x-scroll bg-customBlack p-2 lg:h-full lg:w-1/6 lg:flex-col lg:gap-4 lg:overflow-x-auto lg:bg-opacity-10"
+    >
+      <div className="flex items-center gap-2 lg:flex-col lg:items-start lg:py-16">
+        <Link href="/">
+          <h3 className="font-extrabold text-customWhite">WELCOME!</h3>
+          <p className="whitespace-nowrap font-semibold tracking-tight text-customWhite">
+            Take a look around.
+          </p>
+        </Link>
+        <SomethingWeird />
       </div>
+
+      <ul className="flex h-fit w-full justify-between gap-4 lg:flex-col">
+        <li className="w-full min-w-[10rem]">
+          <a
+            href="#about"
+            className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customRed px-2"
+          >
+            <NavProgressBar itemRef={aboutRef} />
+            <p className="text-sm">01</p>
+            <h3 className="whitespace-nowrap font-semibold">ABOUT ME</h3>
+          </a>
+        </li>
+        <li className="w-full min-w-[10rem]">
+          <a
+            href="#work"
+            className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customRoyalBlue px-2"
+          >
+            <NavProgressBar itemRef={workRef} />
+            <p className="text-sm">02</p>
+            <h3 className="whitespace-nowrap font-semibold">WORK</h3>
+          </a>
+        </li>
+        <li className="w-full min-w-[10rem]">
+          <a
+            href="#contact"
+            className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customBlue px-2"
+          >
+            <NavProgressBar itemRef={contactRef} />
+            <p className="text-sm">03</p>
+            <h3 className="whitespace-nowrap font-semibold">CONTACT</h3>
+          </a>
+        </li>
+        <li className="w-full min-w-[10rem]">
+          <a
+            href="#beat"
+            className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customPurple px-2"
+          >
+            <NavProgressBar itemRef={beatRef} />
+            <p className="text-sm">04</p>
+            <h3 className="whitespace-nowrap font-semibold">MAKE A BEAT</h3>
+          </a>
+        </li>
+      </ul>
     </nav>
   );
 }

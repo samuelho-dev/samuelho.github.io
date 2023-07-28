@@ -52,24 +52,24 @@
 
   "featuredProjects": [
     {
-      "name": "Swapesy",
-      "role": "PM/Engineer",
-      "description": "A mobile ecommerce app for trading card enthusiasts. Users can interact with each other via our real-time messaging platform and trade/purchase cards.",
-      "technologies": ["React Native", "Firebase"],
-      "source": "https://github.com/stunningstunfisk/swapesy",
-      "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1679541608/Portfolio/Swapesy_lkmxdj.png"
-    },
-    {
       "name": "US Data App",
-      "role": "Engineer",
+      "role": "Full Stack Engineer",
       "description": "Data Visualization app based on US Census & Fred Economic Data. Broad overview of diversity, population, housing, and economic conditions utilizing publicly accessible APIs.",
       "technologies": ["Typescript", "NextJS", "Nivo", "MySQL"],
       "source": "https://usdata.vercel.app",
       "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1679541608/Portfolio/USData_yxpbio.png"
     },
     {
+      "name": "Swapesy",
+      "role": "PM/Full Stack Engineer",
+      "description": "A mobile ecommerce app for trading card enthusiasts. Users can interact with each other via our real-time messaging platform and trade/purchase cards.",
+      "technologies": ["React Native", "Firebase"],
+      "source": "https://github.com/stunningstunfisk/swapesy",
+      "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1679541608/Portfolio/Swapesy_lkmxdj.png"
+    },
+    {
       "name": "AlbumGuessr",
-      "role": "Engineer",
+      "role": "Full Stack Engineer",
       "description": "A web game utilizing Spotify search data, and webplayback SDK. Match the currently played track to the correct album cover, earn points and keep track of the top scorers on the leaderboard",
       "technologies": [
         "Typescript",
@@ -84,6 +84,7 @@
     },
     {
       "name": "DiscordSMS",
+      "role": "Back End Engineer",
       "description": "Manage your marketing and event list with SMS and Discord.",
       "technologies": [
         "Node",
@@ -120,7 +121,7 @@
     {
       "name": "GPT Market Analytics",
       "description": "An API utilizing GPT to process and compare news articles about the top companies in a given industry",
-      "technologies": ["Python", "Fast API", "Open AI"],
+      "technologies": ["Python", "Flask", "Open AI"],
       "source": "https://github.com/samuelho-dev/marketanalyticsapi"
     },
     {

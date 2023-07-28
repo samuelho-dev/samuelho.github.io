@@ -62,7 +62,7 @@ function Contact() {
                 type="text"
                 name="name"
                 onChange={handleForm}
-                className="border-b bg-transparent py-2 pl-4 font-light text-black ring-customOrange focus:rounded-md focus:outline-none focus:ring-1"
+                className="border-b bg-transparent py-2 pl-4 font-light text-black ring-customRoyalBlue focus:rounded-md focus:outline-none focus:ring-1"
               />
 
               <label htmlFor="email" className="mt-4 font-light text-black">
@@ -72,7 +72,7 @@ function Contact() {
                 type="email"
                 name="email"
                 onChange={handleForm}
-                className="border-b bg-transparent py-2 pl-4 font-light text-black ring-customOrange focus:rounded-md focus:outline-none focus:ring-1"
+                className="border-b bg-transparent py-2 pl-4 font-light text-black ring-customRoyalBlue focus:rounded-md focus:outline-none focus:ring-1"
               />
 
               <label htmlFor="subject" className="mt-4 font-light text-black">
@@ -82,7 +82,7 @@ function Contact() {
                 type="text"
                 name="subject"
                 onChange={handleForm}
-                className="border-b bg-transparent py-2 pl-4 font-light text-black ring-customOrange focus:rounded-md focus:outline-none focus:ring-1"
+                className="border-b bg-transparent py-2 pl-4 font-light text-black ring-customRoyalBlue focus:rounded-md focus:outline-none focus:ring-1"
               />
 
               <label
@@ -94,7 +94,7 @@ function Contact() {
               </label>
               <textarea
                 name="message"
-                className="border-b bg-transparent py-2 pl-4 font-light text-black ring-customOrange focus:rounded-md focus:outline-none focus:ring-1"
+                className="border-b bg-transparent py-2 pl-4 font-light text-black ring-customRoyalBlue focus:rounded-md focus:outline-none focus:ring-1"
                 onChange={handleForm}
               ></textarea>
               <div className="flex justify-end ">

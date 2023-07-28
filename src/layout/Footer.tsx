@@ -3,7 +3,7 @@ import { BsGithub } from 'react-icons/bs';
 import { FiLinkedin } from 'react-icons/fi';
 function Footer() {
   return (
-    <footer className="flex justify-between p-2">
+    <footer className="z-50 flex justify-between p-2">
       <div className="bg-customYellow px-1">Thanks for coming!</div>
       <div className="flex gap-2">
         <a
