@@ -8,7 +8,7 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 import usePageRefs from 'util/pageRef';
 import NameSvg from '@/components/NameSvg';
 import AboutHeader from '/public/aboutheader.svg';
-import Header from '@/components/animation/header';
+import Header from '@/components/animation/Header';
 
 interface HomeProps {
   handleRoute: Routes['handleRoute'];
