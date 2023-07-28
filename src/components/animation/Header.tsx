@@ -13,7 +13,7 @@ function Header({ id, itemRef, style, children }: HeaderProps) {
   const headerVariants = {
     offscreen: {
       y: 100,
-      opacity: 0.5,
+      opacity: 0,
     },
     onscreen: {
       y: -10,
