@@ -39,8 +39,7 @@ function About() {
             and my previous roles were in corporate lending and FP&A. Having
             worked in cross functional and quantitative roles and also having a
             passion for the arts, I find that I draw from many diciplines. On my
-            free time, I dabble music production, audio engineering and most
-            recently 3d modeling.
+            free time, I dabble music production and animation.
             <br></br>
             <br></br>
             If you would like to check out some of my projects check out my{' '}
@@ -59,15 +58,14 @@ function About() {
             >
               here
             </Link>{' '}
-            for my resume or you can reach me through my{' '}
+            for my resume and my email is{' '}
             <a
-              href="https://samuelho.space/contact"
-              target="_blank"
+              href="#contact"
               className="hover:border-customYtext-customYellow border-b-2 border-transparent text-customYellow transition duration-300"
             >
-              contact form
-            </a>{' '}
-            or at <ins>samuelho343@gmail.com</ins>.<br></br>
+              samuelho343@gmail.com
+            </a>
+            .
           </p>
           <p>Some technologies I have been working with:</p>
           <ul className="inline-grid grid-cols-3 gap-2 py-2">
