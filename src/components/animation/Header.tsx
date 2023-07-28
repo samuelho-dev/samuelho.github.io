@@ -12,7 +12,7 @@ function Header({ id, itemRef, style, children }: HeaderProps) {
   const isInView = useInView(itemRef);
   const headerVariants = {
     offscreen: {
-      y: 100,
+      y: 20,
       opacity: 0,
     },
     onscreen: {
@@ -20,8 +20,8 @@ function Header({ id, itemRef, style, children }: HeaderProps) {
       opacity: 1,
       transition: {
         type: 'spring',
-        bounce: 0.4,
-        duration: 0.8,
+        bounce: 0.2,
+        duration: 1,
       },
     },
   };

@@ -11,8 +11,8 @@ function ListElement({ style, children }: ListElementProps) {
   const isInView = useInView(listRef);
   const headerVariants = {
     offscreen: {
-      x: 30,
-      opacity: 0.5,
+      x: 5,
+      opacity: 0.8,
     },
     onscreen: {
       x: 0,
