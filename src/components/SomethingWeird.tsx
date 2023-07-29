@@ -13,7 +13,7 @@ function SomethingWeird() {
       const offsetX = Math.max(0, Math.min(mouseX, rect.width));
       const offsetY = Math.max(0, Math.min(mouseY, rect.height));
 
-      return { left: offsetX, top: offsetY };
+      return { left: offsetX, top: offsetY + 5 };
     }
   };
   const handleMouseMove = (e: MouseEvent) => {
@@ -27,20 +27,20 @@ function SomethingWeird() {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  });
 
   return (
     <div className="flex h-fit w-fit items-center gap-4">
       <div className="relative h-10 w-6 rounded-full bg-white">
         <div
           ref={eyesRef}
-          className="relative h-4 w-4 rounded-full bg-black outline outline-1 outline-zinc-300"
+          className="relative h-4 w-4 rounded-full bg-black outline outline-1 outline-customWhite"
           style={handleEyesMove()}
         />
       </div>
       <div className=" h-10 w-6 rounded-full bg-white">
         <div
-          className="relative h-4 w-4 rounded-full bg-black outline outline-1 outline-zinc-300"
+          className="relative h-4 w-4 rounded-full bg-black outline outline-1 outline-customWhite"
           style={handleEyesMove()}
         />
       </div>

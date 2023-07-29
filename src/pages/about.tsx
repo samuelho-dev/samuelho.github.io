@@ -13,25 +13,25 @@ import {
   SiAdobe,
   SiReact,
   SiPython,
-  SiFastapi,
+  SiFlask,
 } from 'react-icons/si';
 
-function about() {
+function About() {
   return (
     <section className="flex flex-col items-center justify-center px-2">
-      <div className="flex w-full max-w-6xl flex-col items-center justify-center gap-4 md:w-3/4 md:flex-row">
+      <div className="flex w-full flex-col items-center justify-center gap-4 md:w-3/4 xl:flex-row">
         <div className="w-fit bg-customLightPink hover:bg-none">
           <div className="mix-blend-darken grayscale filter hover:filter-none">
             <Image
               src="https://res.cloudinary.com/ddhal4lbv/image/upload/v1679961213/Portfolio/525F8B4C-5303-4E2E-B816-A605BB0455A7_1_105_c_ordpsi.jpg"
-              height={100}
+              height={500}
               width={300}
               alt="profile"
               loading="lazy"
             />
           </div>
         </div>
-        <div className="flex flex-col px-2 tracking-wide text-white md:w-1/2">
+        <div className="flex w-full flex-col px-2 tracking-wide text-white xl:w-1/2">
           <p>
             Hey! My name is Samuel and I am a software developer passionate
             about creating impactful products and solving business problems. I
@@ -39,8 +39,7 @@ function about() {
             and my previous roles were in corporate lending and FP&A. Having
             worked in cross functional and quantitative roles and also having a
             passion for the arts, I find that I draw from many diciplines. On my
-            free time, I dabble music production, audio engineering and most
-            recently 3d modeling.
+            free time, I dabble music production and animation.
             <br></br>
             <br></br>
             If you would like to check out some of my projects check out my{' '}
@@ -59,15 +58,14 @@ function about() {
             >
               here
             </Link>{' '}
-            for my resume or you can reach me through my{' '}
+            for my resume and my email is{' '}
             <a
-              href="https://samuelho.space/contact"
-              target="_blank"
+              href="#contact"
               className="hover:border-customYtext-customYellow border-b-2 border-transparent text-customYellow transition duration-300"
             >
-              contact form
-            </a>{' '}
-            or at <ins>samuelho343@gmail.com</ins>.<br></br>
+              samuelho343@gmail.com
+            </a>
+            .
           </p>
           <p>Some technologies I have been working with:</p>
           <ul className="inline-grid grid-cols-3 gap-2 py-2">
@@ -104,8 +102,8 @@ function about() {
               <sub>Python</sub>
             </li>
             <li className="flex items-center gap-2">
-              <SiFastapi />
-              <sub>Fast API</sub>
+              <SiFlask />
+              <sub>Flask</sub>
             </li>
             <li className="flex items-center gap-2">
               <SiAbletonlive />
@@ -126,4 +124,4 @@ function about() {
   );
 }
 
-export default about;
+export default About;

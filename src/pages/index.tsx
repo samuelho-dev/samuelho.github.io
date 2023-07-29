@@ -1,63 +1,161 @@
-import SomethingWeird from '@/components/SomethingWeird';
-import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Routes from '../../types/types';
 import StepSequencer from '@/components/StepSequencer';
+import About from './about';
+import Work from './work';
+import CopyEmail from '@/components/CopyEmail';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import usePageRefs from 'util/pageRef';
+import NameSvg from '@/components/NameSvg';
+import AboutHeader from '/public/aboutheader.svg';
+import Header from '@/components/animation/Header';
 
 interface HomeProps {
   handleRoute: Routes['handleRoute'];
+  pageRef: React.RefObject<HTMLDivElement>;
+  frontpageRef: React.RefObject<HTMLDivElement>;
+  aboutRef: React.RefObject<HTMLDivElement>;
+  workRef: React.RefObject<HTMLDivElement>;
+  contactRef: React.RefObject<HTMLDivElement>;
+  beatRef: React.RefObject<HTMLDivElement>;
 }
 
-function Home({ handleRoute }: HomeProps) {
-  return (
-    <section className="flex w-full justify-center">
-      <div className="flex h-full w-3/4 flex-col place-items-center gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-2 lg:grid lg:max-w-4xl lg:grid-flow-row-dense">
-        <div className="col-span-1 row-span-1 flex flex-col justify-center align-middle">
-          <div>
-            <h3 className="text-white">WELCOME!</h3>
-            <h1 className="text-white">Take a look around</h1>
-          </div>
-          <SomethingWeird />
-        </div>
-        <div
-          className="tileShadow col-span-1 row-span-1 flex h-60 w-52 cursor-pointer flex-col items-center justify-center rounded-lg bg-customGreen p-2"
-          onClick={() => handleRoute('work')}
-        >
-          <h5 className="absolute z-50 -translate-y-10 text-4xl font-bold tracking-wider">
-            WORK
-          </h5>
-          <div className="relative h-full w-full">
-            <Image
-              src="/images/work.jpg"
-              alt="work jpg"
-              fill
-              className="object-contain opacity-80"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <div
-          className="tileShadow col-span-1 row-span-1 flex h-60 w-60 cursor-pointer flex-col items-center justify-center rounded-lg bg-customBlue p-2"
-          onClick={() => handleRoute('about')}
-        >
-          <h5 className="absolute z-50 text-4xl font-bold tracking-wider text-black">
-            ABOUT ME
-          </h5>
-          <div className="relative h-full w-full rounded-lg">
-            <Image
-              src="/images/about.jpg"
-              fill
-              alt="project jpg"
-              className="object-contain opacity-90"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <div></div>
+function Home({
+  handleRoute,
+  pageRef,
+  frontpageRef,
+  aboutRef,
+  workRef,
+  contactRef,
+  beatRef,
+}: HomeProps) {
+  const [index, setIndex] = useState(0);
+  const {} = usePageRefs();
+  const [seconds, setSeconds] = useState(0);
 
+  const headers = ['SOFTWARE DEVELOPER', 'CREATIVE', 'ANALYST'];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds((s) => {
+        if (s >= 3) {
+          setIndex((p) => (p + 1) % headers.length);
+          return 0;
+        } else {
+          return s + 1;
+        }
+      });
+    }, 1200);
+    return () => clearInterval(interval);
+  });
+
+  return (
+    <div
+      ref={pageRef}
+      className="flex w-full flex-col items-center justify-center"
+    >
+      <section
+        id="home"
+        ref={frontpageRef}
+        className="flex min-h-screen w-full items-center justify-end "
+      >
+        <div className="flex h-fit w-full flex-col items-end justify-end">
+          <h1 className="text-lg font-extrabold text-customLightPink">
+            {headers[index]}
+          </h1>
+          <div className=" w-fit">
+            <NameSvg />
+          </div>
+
+          <h5 className="w-1/2 text-right text-xl text-customLightPink">
+            Data, Design, and Technology
+          </h5>
+        </div>
+      </section>
+      <Header
+        id="about"
+        itemRef={aboutRef}
+        style={`-mt-20 flex h-fit w-full flex-col items-center pb-20`}
+      >
+        <div className="w-full rounded-lg py-10  px-5">
+          <motion.div
+            whileHover={{
+              width: ['100%', '70%'],
+              transition: {
+                ease: 'easeInOut',
+                duration: 1,
+              },
+            }}
+            className="w-full rounded-lg bg-customRed bg-opacity-90 p-2"
+          >
+            <h5 className="text-3xl">01</h5>
+            <h1 className="underline-black p-5 text-5xl font-bold decoration-black decoration-double decoration-2">
+              ABOUT ME
+            </h1>
+          </motion.div>
+        </div>
+        <div className="w-fit rounded-xl py-20">
+          <About />
+        </div>
+      </Header>
+      <Header
+        id="work"
+        itemRef={workRef}
+        style="flex w-full flex-col items-center rounded-lg py-20"
+      >
+        <div className="w-full rounded-lg bg-customRoyalBlue py-10 px-5">
+          <h5 className="text-3xl ">02</h5>
+          <h1 className="underline-black p-10 text-5xl underline decoration-black decoration-double decoration-2">
+            WORK
+          </h1>
+        </div>
+        <Work />
+      </Header>
+
+      <Header
+        id="contact"
+        itemRef={contactRef}
+        style="my-10 w-full rounded-lg bg-customBlue bg-opacity-90 p-10"
+      >
+        <h5 className="text-3xl">03</h5>
+        <h1 className="underline-black p-10 text-5xl underline decoration-black decoration-double decoration-2">
+          CONTACT
+        </h1>
+        <div className="flex flex-col pt-5 md:p-10">
+          <div className="rounded-lg bg-customBlack bg-opacity-10 p-5">
+            <CopyEmail />
+          </div>
+          <div className="pt-5">
+            <h3>Connect with me on :</h3>
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://github.com/samuelho-dev"
+                aria-label="github"
+                target="_blank"
+                className="text-2xl text-customWhite underline decoration-customBlack underline-offset-4"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://www.linkedin.com/in/samuelho7/"
+                aria-label="linkedin"
+                target="_blank"
+                className="text-2xl text-customWhite underline decoration-customBlack underline-offset-4"
+              >
+                Github
+              </a>
+            </div>
+          </div>
+        </div>
+      </Header>
+
+      <Header
+        id="beat"
+        itemRef={beatRef}
+        style="flex w-full  flex-col items-center rounded-lg bg-customPurple py-20  md:p-20"
+      >
         <StepSequencer />
-      </div>
-    </section>
+      </Header>
+    </div>
   );
 }
 
