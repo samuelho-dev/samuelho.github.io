@@ -104,6 +104,7 @@ function Projects() {
                 >
                   <a
                     href={project.source}
+                    aria-label={project.source}
                     className="cursor-pointer"
                     target="_blank"
                   >
