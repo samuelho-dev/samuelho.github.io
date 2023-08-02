@@ -32,6 +32,7 @@ function WorkHistory() {
             <h2 className="text-lg font-extrabold">Previously..</h2>
             <Link
               href={'/Resume_SamuelHo.docx'}
+              aria-label="Resume"
               download
               className="cursor-pointer"
             >

@@ -64,44 +64,44 @@ function Navbar({
 
       <ul className="flex h-fit w-full justify-between gap-4 lg:flex-col">
         <li className="w-full min-w-[10rem] max-w-[15rem]">
-          <a
-            href="#about"
+          <Link
+            href="/#about"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customRed px-2"
           >
             <NavProgressBar itemRef={aboutRef} />
             <p className="text-sm">01</p>
             <h3 className="whitespace-nowrap font-semibold">ABOUT ME</h3>
-          </a>
+          </Link>
         </li>
         <li className="w-full min-w-[10rem] max-w-[15rem]">
-          <a
-            href="#work"
+          <Link
+            href="/#work"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customRoyalBlue px-2"
           >
             <NavProgressBar itemRef={workRef} />
             <p className="text-sm">02</p>
             <h3 className="whitespace-nowrap font-semibold">WORK</h3>
-          </a>
+          </Link>
         </li>
         <li className="w-full min-w-[10rem] max-w-[15rem]">
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customBlue px-2"
           >
             <NavProgressBar itemRef={contactRef} />
             <p className="text-sm">03</p>
             <h3 className="whitespace-nowrap font-semibold">CONTACT</h3>
-          </a>
+          </Link>
         </li>
         <li className="w-full min-w-[10rem] max-w-[15rem]">
-          <a
-            href="#beat"
+          <Link
+            href="/#beat"
             className="relative flex h-16 w-full flex-col justify-between rounded-lg bg-customPurple px-2"
           >
             <NavProgressBar itemRef={beatRef} />
             <p className="text-sm">04</p>
             <h3 className="whitespace-nowrap font-semibold">MAKE A BEAT</h3>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
