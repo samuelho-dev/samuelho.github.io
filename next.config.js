@@ -6,7 +6,7 @@ module.exports = {
   ...nextConfig,
   webpack(config, options) {
     config.module.rules.push({
-      test: /\.(wav)$/i,
+      test: /\.(mp3)$/i,
       type: 'asset/resource',
       generator: {
         filename: 'static/sounds/[name].[hash][ext]',
