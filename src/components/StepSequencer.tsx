@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as Tone from 'tone';
 import { Sampler, Transport } from 'tone';
-import hiHat from 'public/sounds/NAMI_Hi-Hat_Armani.wav';
-import Snare from 'public/sounds/RL_-_Razor_Snare.wav';
-import Kick from 'public/sounds/Slappy_Kick_35.wav';
-import Bongo from 'public/sounds/SD3_BONGO33.wav';
+import hiHat from 'public/sounds/NAMI_Hi-Hat_Armani.mp3';
+import Snare from 'public/sounds/RL_-_Razor_Snare.mp3';
+import Kick from 'public/sounds/Slappy_Kick_35.mp3';
+import Bongo from 'public/sounds/SD3_BONGO33.mp3';
 
 const notes = [hiHat, Snare, Kick, Bongo];
 
@@ -90,6 +90,7 @@ function StepSequencer() {
           <div className="flex gap-2">
             <label className="whitespace-nowrap text-sm">Tempo :</label>
             <input
+              aria-label="tempo"
               type="number"
               className="w-12 px-1 text-sm"
               value={tempo}
@@ -121,6 +122,7 @@ function StepSequencer() {
               {col.map((note, noteIdx) => (
                 <button
                   disabled={!loaded}
+                  aria-label="note"
                   className={`akaiShadow h-6 w-6 border border-[#78797D] md:h-8 md:w-8 ${
                     note.isActive
                       ? 'rounded-lg bg-[#78797D]'
