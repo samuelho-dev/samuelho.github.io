@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Routes from '../../types/types';
-import StepSequencer from '@/components/StepSequencer';
 import About from './about';
-import Work from './work';
 import CopyEmail from '@/components/CopyEmail';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import usePageRefs from 'util/pageRef';
-import NameSvg from '@/components/NameSvg';
-import AboutHeader from '/public/aboutheader.svg';
 import Header from '@/components/animation/Header';
+import dynamic from 'next/dynamic';
 
 interface HomeProps {
   handleRoute: Routes['handleRoute'];
@@ -19,6 +16,18 @@ interface HomeProps {
   contactRef: React.RefObject<HTMLDivElement>;
   beatRef: React.RefObject<HTMLDivElement>;
 }
+
+const BeatmakerDynamic = dynamic(() => import('@/components/StepSequencer'), {
+  loading: () => <div>Loading...</div>,
+});
+
+const WorkDynamic = dynamic(() => import('./work'), {
+  loading: () => <div>Loading...</div>,
+});
+
+const NameSvgDynamic = dynamic(() => import('@/components/NameSvg'), {
+  loading: () => <h1>Samuel Ho</h1>,
+});
 
 function Home({
   handleRoute,
@@ -63,7 +72,7 @@ function Home({
             {headers[index]}
           </h1>
           <div className=" w-fit">
-            <NameSvg />
+            <NameSvgDynamic />
           </div>
 
           <h5 className="w-1/2 text-right text-xl text-customLightPink">
@@ -108,7 +117,7 @@ function Home({
             WORK
           </h1>
         </div>
-        <Work />
+        <WorkDynamic />
       </Header>
 
       <Header
@@ -153,7 +162,7 @@ function Home({
         itemRef={beatRef}
         style="flex w-full  flex-col items-center rounded-lg bg-customPurple py-20  md:p-20"
       >
-        <StepSequencer />
+        <BeatmakerDynamic />
       </Header>
     </div>
   );
