@@ -33,8 +33,8 @@ function About() {
         </div>
         <div className="flex w-full flex-col px-2 tracking-wide text-white xl:w-1/2">
           <p>
-            Hey! My name is Samuel and I am a software developer passionate
-            about creating impactful products and solving business problems. I
+            Hey! My name is Samuel and I am a software engineer passionate about
+            creating impactful products and solving business problems. I
             graduated from UC Santa Barbara in 2018 with a B.A. in Economics,
             and my previous roles were in corporate lending and FP&A. Having
             worked in cross functional and quantitative roles and also having a
