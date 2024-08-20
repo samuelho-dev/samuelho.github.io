@@ -42,7 +42,7 @@ function Home({
   const {} = usePageRefs();
   const [seconds, setSeconds] = useState(0);
 
-  const headers = ['SOFTWARE DEVELOPER', 'CREATIVE', 'ANALYST'];
+  const headers = ['SOFTWARE ENGINEER', 'CREATIVE', 'ANALYST'];
   useEffect(() => {
     const interval = setInterval(() => {
       setSeconds((s) => {
