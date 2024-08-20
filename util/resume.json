@@ -15,6 +15,18 @@
   ],
   "workExperience": [
     {
+      "employer": "PBS SoCal",
+      "employer_url": "https://www.pbs.org/",
+      "location": "Los Angeles, CA",
+      "title": "Marketing Technology Engineer",
+      "dates": "Aug 2023 – Current",
+      "responsibilities": [
+        "Spearheaded development and optimization of data pipelines, integrating ad servers, CDPs, and CRMs, resulting in a 40% increase in email campaign open rates.",
+        "Led integration of new technologies and workflows into existing data architecture, coordinating with consulting groups, vendors, and internal BI teams, resulting in a 15% improvement in customer profile unification across social platforms. Maintained data automation and integrity within the data pipeline, ensuring efficient and accurate reporting, supporting audience insights, segmentation, and attribution.",
+        "Maintained data automation across the data warehouse, data visualization dashboards, CDP, CRM, and marketing analytics platforms. Collaborated between marketing teams to provide data insights, integrity, and literacy."
+      ]
+    },
+    {
       "employer": "COACH New York",
       "employer_url": "https://www.coach.com/",
       "location": "New York, NY",
@@ -51,6 +63,19 @@
   ],
 
   "featuredProjects": [
+    {
+      "name": "Audiospace",
+      "role": "Founder",
+      "description": "Music collective based in Los Angeles. Building live shows & events for artists by artists.",
+      "technologies": [
+        "NextJS",
+        "Social Media Marketing",
+        "Event Production",
+        "Audio Engineering"
+      ],
+      "source": "https://instagram.com/audiospacehq",
+      "image": "https://res.cloudinary.com/ddhal4lbv/image/upload/v1724131876/audiospacelive/otks0hrip8a1wsxpar9v.png"
+    },
     {
       "name": "US Data App",
       "role": "Full Stack Engineer",
@@ -99,25 +124,6 @@
     }
   ],
   "otherProjects": [
-    {
-      "name": "Audiospace",
-      "description": "An audio plugin and sample kit marketplace and community. Multivendor, Custom blog CMS, Beat Battles, Stripe Integration, built with Typescript & Nextjs",
-      "technologies": [
-        "Typescript",
-        "NextJS",
-        "Tailwind",
-        "MDX",
-        "TRPC",
-        "Prisma",
-        "NextAuth",
-        "Backblaze",
-        "MySQL",
-        "AWS",
-        "Stripe",
-        "Twilio"
-      ],
-      "source": "https://github.com/samuelho-dev/audiospace"
-    },
     {
       "name": "GPT Market Analytics",
       "description": "An API utilizing GPT to process and compare news articles about the top companies in a given industry",
